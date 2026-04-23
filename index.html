@@ -818,6 +818,25 @@
   }
   .form-group textarea { resize: vertical; min-height: 110px; }
   .form-card button { width: 100%; justify-content: center; margin-top: 8px; }
+  .form-card button[disabled] { opacity: .6; cursor: not-allowed; }
+  .form-card button .btn-label { display: inline-block; }
+  .form-feedback {
+    margin-top: 16px; padding: 14px 18px; border-radius: 12px;
+    font-size: .92rem; display: none;
+  }
+  .form-feedback.show { display: block; animation: feedbackIn .35s ease-out; }
+  .form-feedback.success {
+    background: rgba(141,198,63,.14); color: var(--lime-deep);
+    border: 1px solid rgba(141,198,63,.35);
+  }
+  .form-feedback.error {
+    background: rgba(220,38,38,.08); color: #b91c1c;
+    border: 1px solid rgba(220,38,38,.3);
+  }
+  @keyframes feedbackIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
   /* ─── FOOTER ─── */
   footer {
@@ -1463,27 +1482,27 @@
         </a>
       </div>
 
-      <form class="form-card reveal delay-1" action="https://formsubmit.co/contact@study-elec.fr" method="POST">
-        <!-- Paramètres FormSubmit (service gratuit, pas d'inscription) -->
-        <input type="hidden" name="_subject" value="Nouvelle demande depuis le site Study Elec" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="true" />
-        <input type="hidden" name="_next" value="https://study-elec.fr/?sent=1" />
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+      <form class="form-card reveal delay-1" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Paramètres Web3Forms -->
+        <input type="hidden" name="access_key" value="ca28a5a8-bb79-486c-99a3-b3065b32d370" />
+        <input type="hidden" name="subject" value="Nouvelle demande depuis le site Study Elec" />
+        <input type="hidden" name="from_name" value="Site Study Elec" />
+        <!-- Honeypot anti-spam (doit rester vide) -->
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" />
 
         <h3>Décrivez votre projet</h3>
         <p class="form-sub">Tous les champs marqués d'un * sont obligatoires.</p>
         <div class="form-row">
-          <div class="form-group"><label for="name">Nom complet *</label><input type="text" id="name" name="Nom" required placeholder="Jean Dupont" /></div>
-          <div class="form-group"><label for="company">Société</label><input type="text" id="company" name="Societe" placeholder="Votre entreprise" /></div>
+          <div class="form-group"><label for="name">Nom complet *</label><input type="text" id="name" name="name" required placeholder="Jean Dupont" /></div>
+          <div class="form-group"><label for="company">Société</label><input type="text" id="company" name="societe" placeholder="Votre entreprise" /></div>
         </div>
         <div class="form-row">
           <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required placeholder="jean@societe.fr" /></div>
-          <div class="form-group"><label for="phone">Téléphone</label><input type="tel" id="phone" name="Telephone" placeholder="+33 6 00 00 00 00" /></div>
+          <div class="form-group"><label for="phone">Téléphone</label><input type="tel" id="phone" name="telephone" placeholder="+33 6 00 00 00 00" /></div>
         </div>
         <div class="form-group">
           <label for="project-type">Nature du projet</label>
-          <select id="project-type" name="Nature_du_projet">
+          <select id="project-type" name="nature_projet">
             <option>Maîtrise d'œuvre électrique CFO / CFA</option>
             <option>Étude de prix</option>
             <option>Étude d'exécution (BIM / 2D)</option>
@@ -1493,11 +1512,12 @@
             <option>Autre</option>
           </select>
         </div>
-        <div class="form-group"><label for="message">Votre message *</label><textarea id="message" name="Message" required placeholder="Décrivez votre projet, délais, surfaces, contraintes..."></textarea></div>
-        <button type="submit" class="btn btn-primary">
-          Envoyer ma demande
+        <div class="form-group"><label for="message">Votre message *</label><textarea id="message" name="message" required placeholder="Décrivez votre projet, délais, surfaces, contraintes..."></textarea></div>
+        <button type="submit" class="btn btn-primary" id="contactSubmit">
+          <span class="btn-label">Envoyer ma demande</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
         </button>
+        <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
       </form>
     </div>
   </div>
@@ -1880,9 +1900,73 @@ window.addEventListener('scroll', () => {
     });
   });
   closeBtn.addEventListener('click', close);
-  cta.addEventListener('click', close);
+  cta.addEventListener('click', (e) => {
+    e.preventDefault();
+    close();
+    // Petit délai pour laisser la modal se fermer, puis scroll smooth vers le formulaire
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Focus sur le 1er champ du formulaire après scroll
+        setTimeout(() => {
+          const firstField = document.getElementById('name');
+          if (firstField) firstField.focus({ preventScroll: true });
+        }, 600);
+      }
+    }, 150);
+  });
   modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
+})();
+
+/* ───────── CONTACT FORM (Web3Forms AJAX) ───────── */
+(function(){
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  const submitBtn = document.getElementById('contactSubmit');
+  const feedback = document.getElementById('formFeedback');
+  const label = submitBtn.querySelector('.btn-label');
+  const originalLabel = label.textContent;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    feedback.className = 'form-feedback';
+    submitBtn.disabled = true;
+    label.textContent = 'Envoi en cours…';
+
+    const formData = new FormData(form);
+    // Honeypot check
+    if (formData.get('botcheck')) {
+      submitBtn.disabled = false;
+      label.textContent = originalLabel;
+      return;
+    }
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        feedback.textContent = '✓ Merci ! Votre message a bien été envoyé. Nous revenons vers vous sous 48 h ouvrées.';
+        feedback.className = 'form-feedback show success';
+        form.reset();
+      } else {
+        feedback.textContent = 'Erreur lors de l\'envoi : ' + (data.message || 'veuillez réessayer.');
+        feedback.className = 'form-feedback show error';
+      }
+    } catch (err) {
+      feedback.textContent = 'Erreur réseau. Si le problème persiste, envoyez-nous directement un email à contact@study-elec.fr';
+      feedback.className = 'form-feedback show error';
+    } finally {
+      submitBtn.disabled = false;
+      label.textContent = originalLabel;
+    }
+  });
 })();
 
 /* ───────── TOOL MODAL ───────── */
