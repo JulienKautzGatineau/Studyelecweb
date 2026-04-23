@@ -1,0 +1,30 @@
+# ─── macOS / système ───
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# ─── LibreOffice / Excel locks ───
+.~lock*
+~$*
+
+# ─── Éditeurs ───
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ─── Doublons à la racine ───
+# Les versions canoniques des images sont dans assets/
+# On ignore les copies qui se trouveraient à la racine du projet.
+/*.png
+/*.jpg
+/*.jpeg
+/*.ico
+
+# ─── Divers ───
+node_modules/
+.env
+.env.local
+*.log

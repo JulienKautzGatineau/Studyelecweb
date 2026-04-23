@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nos principales références — Study Elec</title>
+<meta name="description" content="43 projets signés Study Elec : immeubles de bureaux, hôtels, hôpitaux, écoles, industrie. Paris, La Défense, Île-de-France, régions." />
+<link rel="icon" type="image/png" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
+<link rel="shortcut icon" href="assets/apple-touch-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1B3A6C;--navy-2:#2A4F8A;--navy-deep:#0F2547;--lime:#8DC63F;--lime-2:#7AB32F;--cyan:#3CAEC8;--cyan-2:#2B97B3;--ink:#0F2547;--bg:#FAFBF7;--bg-2:#F1F4EC;--white:#FFF;--grey:#5C6B7C;--line:rgba(27,58,108,.1);--shadow-sm:0 1px 3px rgba(27,58,108,.06),0 1px 2px rgba(27,58,108,.04);--shadow-md:0 10px 30px rgba(27,58,108,.08),0 2px 6px rgba(27,58,108,.04);--shadow-lg:0 30px 60px rgba(27,58,108,.15),0 10px 20px rgba(27,58,108,.08);}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+  img,svg,video,iframe{max-width:100%;height:auto;display:block}
+  p,h1,h2,h3,h4,h5,li,a,span,div{word-wrap:break-word;overflow-wrap:anywhere}
+  input,select,textarea,button{max-width:100%;font-family:inherit}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.1;color:var(--navy)}
+  .container{max-width:1320px;margin:0 auto;padding:0 28px}
+  a{color:inherit}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,251,247,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s}
+  nav.scrolled{border-bottom-color:var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px;max-width:1320px;margin:0 auto;padding:0 28px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .logo img.logo-img{display:block;height:72px;width:auto}
+  .footer-about .logo img.logo-img{height:72px;background:#fff;padding:8px 14px;border-radius:10px}
+  .logo-text{display:flex;flex-direction:column;line-height:1}
+  .logo-text .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.35rem;color:var(--navy);letter-spacing:-.02em}
+  .logo-text .tag{font-size:.67rem;color:var(--lime-2);font-weight:700;letter-spacing:.08em;margin-top:3px}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:.93rem;font-weight:500;opacity:.8;transition:opacity .2s,color .2s}
+  .nav-links a:hover{opacity:1;color:var(--navy)}
+  .nav-links a.active{opacity:1;color:var(--navy);font-weight:600;position:relative}
+  .nav-links a.active::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;background:linear-gradient(90deg,var(--lime),var(--cyan))}
+  .nav-cta{background:var(--navy);color:#fff!important;padding:12px 24px;border-radius:12px;font-weight:600!important;opacity:1!important}
+  .nav-cta:hover{background:var(--navy-deep)}
+  .burger{display:none;background:none;border:none;padding:8px;cursor:pointer}
+  .burger span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0}
+
+  /* HERO */
+  .page-hero{padding:160px 0 60px;text-align:center;position:relative;overflow:hidden}
+  .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 20% 20%,rgba(141,198,63,.18),transparent 60%),radial-gradient(ellipse 60% 40% at 85% 80%,rgba(60,174,200,.16),transparent 60%);z-index:0}
+  .page-hero>.container{position:relative;z-index:1}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:500;color:var(--navy);box-shadow:var(--shadow-sm);margin-bottom:24px}
+  .eyebrow .dot{width:8px;height:8px;background:var(--lime);border-radius:50%;box-shadow:0 0 0 4px rgba(141,198,63,.25)}
+  .page-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:20px}
+  .page-hero h1 .accent{background:linear-gradient(120deg,var(--lime-2),var(--lime));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .page-hero p{color:var(--grey);font-size:1.1rem;max-width:720px;margin:0 auto}
+
+  /* FILTER BAR */
+  .filters{padding:30px 0;position:sticky;top:80px;background:rgba(250,251,247,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid var(--line)}
+  .filters-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .filter-label{font-size:.78rem;color:var(--grey);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .chip{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-size:.85rem;font-weight:500;color:var(--navy);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+  .chip:hover{background:var(--bg-2);transform:translateY(-1px)}
+  .chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+  /* GRID */
+  .projects{padding:50px 0 120px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+  .proj{background:#fff;border:1px solid var(--line);border-radius:var(--shadow-sm);border-radius:18px;overflow:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;position:relative}
+  .proj:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .proj-cover{height:200px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px}
+  .proj-cover img.proj-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .proj:hover .proj-photo{transform:scale(1.06)}
+  .proj-cover::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,37,71,.1) 0%,rgba(15,37,71,0) 35%,rgba(15,37,71,.55) 100%);pointer-events:none}
+  .proj-cover .badge{position:relative;z-index:2;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.95);backdrop-filter:blur(4px);padding:5px 11px;border-radius:999px;font-size:.72rem;font-weight:600;color:var(--navy);letter-spacing:.03em;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+  .proj-cover .type-icon{position:absolute;top:18px;right:18px;font-size:1.9rem;z-index:2;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}
+  .proj-cover.c-bureaux{background:linear-gradient(135deg,#1B3A6C,#2A4F8A 70%,#3CAEC8)}
+  .proj-cover.c-hotellerie{background:linear-gradient(135deg,#7AB32F,#8DC63F 70%,#C4E86A)}
+  .proj-cover.c-sante{background:linear-gradient(135deg,#2B97B3,#3CAEC8 70%,#89E0F3)}
+  .proj-cover.c-enseignement{background:linear-gradient(135deg,#1B3A6C 20%,#8DC63F)}
+  .proj-cover.c-commerce{background:linear-gradient(135deg,#2A4F8A,#3CAEC8)}
+  .proj-cover.c-industrie{background:linear-gradient(135deg,#0F2547,#5F8F1F 80%,#8DC63F)}
+  .proj-cover.c-logistique{background:linear-gradient(135deg,#5C6B7C,#1B3A6C)}
+  .proj-cover.c-public{background:linear-gradient(135deg,#0F2547,#2B97B3)}
+
+  .proj-body{padding:22px 22px 20px}
+  .proj-loc{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--grey);margin-bottom:10px;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+  .proj-loc svg{width:12px;height:12px}
+  .proj h3{font-size:1.05rem;margin-bottom:12px;font-weight:700;line-height:1.25;min-height:2.6em}
+  .proj-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;padding-top:12px;border-top:1px solid var(--line)}
+  .proj-stat{font-size:.78rem;color:var(--grey);display:inline-flex;align-items:center;gap:4px}
+  .proj-stat strong{color:var(--navy);font-weight:700}
+  .proj-client{font-size:.8rem;color:var(--grey);margin-bottom:10px}
+  .proj-client strong{color:var(--navy);font-weight:600}
+  .proj-tags{display:flex;flex-wrap:wrap;gap:5px}
+  .proj-tag{background:var(--bg-2);padding:3px 9px;border-radius:6px;font-size:.7rem;color:var(--navy);font-weight:600;letter-spacing:.02em}
+  .proj-tag.moe{background:rgba(141,198,63,.2);color:var(--lime-2)}
+
+  .empty{text-align:center;padding:80px 20px;color:var(--grey);grid-column:1/-1}
+
+  /* CTA */
+  .cta-section{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 50%,var(--cyan-2) 130%);color:#fff;padding:80px 0;margin-top:60px;text-align:center;position:relative;overflow:hidden}
+  .cta-section::before{content:'';position:absolute;top:-30%;right:-10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(141,198,63,.25),transparent 60%)}
+  .cta-section>.container{position:relative;z-index:1}
+  .cta-section h2{color:#fff;font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:16px}
+  .cta-section p{color:rgba(255,255,255,.78);max-width:600px;margin:0 auto 28px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:12px;font-weight:600;font-size:.98rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
+  .btn-green{background:var(--lime);color:var(--navy);box-shadow:0 12px 30px rgba(141,198,63,.35)}
+  .btn-green:hover{background:var(--lime-2);transform:translateY(-3px);box-shadow:0 20px 40px rgba(141,198,63,.5)}
+
+  /* FOOTER */
+  footer{background:var(--navy-deep);color:rgba(255,255,255,.8);padding:80px 0 30px;position:relative;overflow:hidden}
+  footer::before{content:'';position:absolute;top:-20%;right:-5%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(141,198,63,.12),transparent 60%)}
+  .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:40px;position:relative;z-index:1}
+  .footer-about p{font-size:.92rem;line-height:1.7;opacity:.75;max-width:340px;margin-top:18px}
+  .footer-col h5{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;font-weight:700}
+  .footer-col ul{list-style:none}
+  .footer-col li{margin-bottom:10px}
+  .footer-col a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.93rem;transition:color .2s}
+  .footer-col a:hover{color:var(--lime)}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.1);padding-top:26px;flex-wrap:wrap;gap:16px;font-size:.85rem;opacity:.65;position:relative;z-index:1}
+
+  /* TABLET */
+  @media(max-width:1100px){
+    .grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+    .filters-inner{gap:14px}
+  }
+  /* MOBILE LARGE */
+  @media(max-width:900px){
+    nav .nav-inner{height:70px}
+    .logo img.logo-img{height:58px}
+    .logo-svg{width:48px;height:40px}
+    .logo-text .name{font-size:1.15rem}
+    .logo-text .tag{font-size:.6rem}
+    .nav-links{position:fixed;top:70px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:16px 24px 24px;gap:0;border-bottom:1px solid var(--line);box-shadow:var(--shadow-md);transform:translateY(-150%);transition:transform .3s cubic-bezier(.2,.8,.2,1);max-height:calc(100vh - 70px);overflow-y:auto}
+    .nav-links.open{transform:translateY(0)}
+    .nav-links a{padding:16px 4px;border-bottom:1px solid var(--line);font-size:1rem}
+    .nav-links a:last-child{border:none;margin-top:12px;text-align:center;padding:14px 22px}
+    .nav-links a.active::after{display:none}
+    .burger{display:block}
+
+    .page-hero{padding:110px 0 40px}
+    .page-hero h1{font-size:clamp(1.8rem,7vw,2.4rem)}
+    .page-hero p{font-size:.98rem}
+    .eyebrow{font-size:.76rem;padding:7px 12px}
+
+    /* Filtres : scroll horizontal sur mobile */
+    .filters{top:70px;padding:16px 0}
+    .filters-inner{flex-direction:column;align-items:center;gap:10px}
+    .chips{gap:6px;overflow-x:auto;flex-wrap:nowrap;width:100%;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start}
+    .chips::-webkit-scrollbar{display:none}
+    .chip{padding:8px 13px;font-size:.78rem;flex-shrink:0;white-space:nowrap}
+    .count{font-size:.82rem}
+
+    .projects{padding:30px 0 80px}
+    .grid{grid-template-columns:1fr;gap:14px}
+    .proj{border-radius:16px}
+    .proj-cover{height:120px;padding:14px}
+    .proj-cover .type-icon{font-size:1.6rem;top:14px;right:14px}
+    .proj-cover .badge{font-size:.68rem;padding:4px 10px}
+    .proj-body{padding:20px 20px 18px}
+    .proj h3{font-size:1rem;min-height:auto;margin-bottom:10px}
+    .proj-stats{padding-top:10px;margin-bottom:10px}
+    .proj-client{font-size:.78rem}
+    .proj-tag{font-size:.68rem;padding:3px 8px}
+
+    .cta-section{padding:60px 0;margin-top:40px}
+    .cta-section h2{font-size:1.6rem}
+    .cta-section p{font-size:.96rem}
+    .btn{padding:14px 24px;font-size:.92rem}
+
+    footer{padding:60px 0 26px}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:28px;margin-bottom:30px}
+    .footer-about{grid-column:1/-1}
+    .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px;font-size:.8rem}
+  }
+  /* MOBILE SMALL */
+  @media(max-width:520px){
+    .container{padding:0 18px}
+    .nav-inner{padding:0 18px;height:64px}
+    .nav-links{top:64px}
+    .logo-svg{width:42px;height:36px}
+    .logo-text .name{font-size:1.05rem}
+    .logo-text .tag{font-size:.56rem;letter-spacing:.05em}
+
+    .page-hero{padding:95px 0 30px}
+    .page-hero h1{font-size:1.65rem;line-height:1.15}
+    .page-hero p{font-size:.92rem}
+
+    .filters{top:64px;padding:14px 0}
+    .chip{padding:7px 11px;font-size:.74rem}
+    .chip .n{font-size:.66rem}
+
+    .proj-cover{height:105px;padding:12px}
+    .proj-cover .type-icon{font-size:1.4rem;top:12px;right:12px}
+    .proj-body{padding:18px 16px 16px}
+    .proj h3{font-size:.96rem}
+    .proj-stat{font-size:.74rem}
+    .proj-stat strong{font-size:.85rem}
+
+    .cta-section{padding:50px 0;margin-top:30px}
+    .cta-section h2{font-size:1.35rem}
+    .btn{width:100%;justify-content:center;padding:14px 20px}
+
+    .footer-grid{grid-template-columns:1fr;gap:24px}
+    .footer-about{grid-column:auto}
+    .footer-about p{font-size:.88rem}
+  }
+  /* PROJET CLIQUABLE */
+  .proj{cursor:pointer}
+  .proj::after{content:'';position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,var(--lime),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+  .proj:hover::after{transform:scaleX(1)}
+  .proj-more{position:absolute;top:14px;left:14px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.85);color:var(--navy);display:grid;place-items:center;opacity:0;transform:scale(.8);transition:opacity .25s,transform .25s;z-index:3;pointer-events:none}
+  .proj:hover .proj-more{opacity:1;transform:scale(1)}
+  .proj-more svg{width:14px;height:14px}
+
+  /* PROJECT MODAL */
+  .proj-modal{position:fixed;inset:0;z-index:500;background:rgba(15,37,71,.58);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .25s;padding:20px}
+  .proj-modal.open{opacity:1;pointer-events:auto}
+  .proj-modal-card{background:#fff;border-radius:22px;max-width:640px;width:100%;max-height:92vh;overflow-y:auto;overflow-x:hidden;box-shadow:0 30px 80px rgba(15,37,71,.4);transform:translateY(14px) scale(.97);transition:transform .3s cubic-bezier(.2,.8,.2,1);position:relative;-webkit-overflow-scrolling:touch}
+  .proj-modal-card::-webkit-scrollbar{width:8px}
+  .proj-modal-card::-webkit-scrollbar-track{background:transparent}
+  .proj-modal-card::-webkit-scrollbar-thumb{background:rgba(27,58,108,.18);border-radius:8px}
+  .proj-modal-card::-webkit-scrollbar-thumb:hover{background:rgba(27,58,108,.32)}
+  .proj-modal.open .proj-modal-card{transform:translateY(0) scale(1)}
+  .proj-modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,.9);color:var(--navy);cursor:pointer;font-size:1.2rem;line-height:1;display:grid;place-items:center;transition:background .2s,transform .2s;z-index:3;box-shadow:0 4px 14px rgba(15,37,71,.2)}
+  .proj-modal-close:hover{background:#fff;transform:rotate(90deg)}
+  .proj-modal-cover{padding:34px 32px 26px;color:#fff;position:relative;overflow:hidden;min-height:260px;display:flex;flex-direction:column;justify-content:flex-end}
+  .proj-modal-cover img.proj-modal-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .proj-modal-cover::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,37,71,.25) 0%,rgba(15,37,71,.15) 30%,rgba(15,37,71,.82) 100%);pointer-events:none}
+  .proj-modal-cover>*{position:relative;z-index:2}
+  .proj-modal-badge{display:inline-block;padding:5px 12px;background:rgba(255,255,255,.15);border-radius:999px;font-size:.74rem;font-weight:600;letter-spacing:.04em;margin-bottom:14px;backdrop-filter:blur(6px)}
+  .proj-modal-icon-float{position:absolute;top:24px;right:28px;font-size:2.6rem;opacity:.4;z-index:0}
+  .proj-modal-title{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;line-height:1.2;color:#fff;padding-right:50px;margin-bottom:6px}
+  .proj-modal-loc{font-size:.88rem;opacity:.85;display:inline-flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+  .proj-modal-loc svg{width:14px;height:14px}
+  .proj-modal-body{padding:28px 32px 30px}
+  .proj-modal-desc{font-size:1rem;line-height:1.6;color:var(--ink);margin-bottom:22px}
+  .proj-modal-desc strong{color:var(--navy)}
+  .proj-modal-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:24px;padding:16px;background:var(--bg-2);border-radius:14px}
+  .proj-modal-stat-label{font-size:.7rem;color:var(--grey);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:4px}
+  .proj-modal-stat-value{font-size:1rem;color:var(--navy);font-weight:700;line-height:1.3}
+  .proj-modal-section-title{font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+  .proj-modal-missions{list-style:none;display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:20px}
+  .proj-modal-missions li{position:relative;padding-left:22px;font-size:.92rem;color:var(--ink);line-height:1.5}
+  .proj-modal-missions li::before{content:'';position:absolute;left:0;top:8px;width:12px;height:2px;background:linear-gradient(90deg,var(--lime),var(--cyan));border-radius:2px}
+  .proj-modal-tags{display:flex;flex-wrap:wrap;gap:6px}
+  .proj-modal-tags .proj-tag{font-size:.75rem;padding:4px 10px}
+  @media(max-width:560px){
+    .proj-modal-cover{padding:26px 22px 22px}
+    .proj-modal-title{font-size:1.25rem}
+    .proj-modal-body{padding:22px 22px 24px}
+    .proj-modal-stats{grid-template-columns:1fr 1fr;gap:10px;padding:14px}
+  }
+
+  /* ACCESSIBILITÉ */
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="Study Elec — Études &amp; Conseils">
+      <img class="logo-img" src="assets/logo-header.png" srcset="assets/logo-header@2x.png 2x" alt="Study Elec — Études &amp; Conseils">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#services">Services</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="references.html" class="active">Références</a>
+      <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow"><span class="dot"></span>Nos références · Ils nous ont fait confiance</div>
+    <h1>Plus de <span class="accent">40 projets</span> au service<br>de la performance des installations.</h1>
+    <p>Un aperçu des opérations tertiaires menées par Study Elec — bureaux, hôtellerie, santé, enseignement, industrie, commerce — pour les plus grands donneurs d'ordre publics et privés.</p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="filters">
+  <div class="container filters-inner">
+    <div class="filter-label">Filtrez par typologie de projet</div>
+    <div class="chips" id="chips">
+      <button class="chip active" data-cat="all">Tous</button>
+      <button class="chip" data-cat="bureaux">Bureaux</button>
+      <button class="chip" data-cat="hotellerie">Hôtellerie</button>
+      <button class="chip" data-cat="sante">Santé</button>
+      <button class="chip" data-cat="enseignement">Enseignement</button>
+      <button class="chip" data-cat="commerce">Commerce &amp; Culture</button>
+      <button class="chip" data-cat="industrie">Industrie &amp; Labs</button>
+      <button class="chip" data-cat="logistique">Logistique</button>
+      <button class="chip" data-cat="public">ERP / Public</button>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="projects">
+  <div class="container">
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div class="proj-modal" id="projModal" role="dialog" aria-modal="true" aria-labelledby="projModalTitle" aria-hidden="true">
+  <div class="proj-modal-card" role="document">
+    <button class="proj-modal-close" id="projModalClose" aria-label="Fermer">✕</button>
+    <div class="proj-modal-cover" id="projModalCover">
+      <img class="proj-modal-photo" id="projModalPhoto" alt="" onerror="this.style.display='none'">
+      <span class="proj-modal-icon-float" id="projModalIconFloat"></span>
+      <div class="proj-modal-badge" id="projModalBadge"></div>
+      <div class="proj-modal-title" id="projModalTitle"></div>
+      <div class="proj-modal-loc" id="projModalLoc"></div>
+    </div>
+    <div class="proj-modal-body">
+      <p class="proj-modal-desc" id="projModalDesc"></p>
+      <div class="proj-modal-stats" id="projModalStats"></div>
+      <div class="proj-modal-section-title">Prestations assurées par Study Elec</div>
+      <ul class="proj-modal-missions" id="projModalMissions"></ul>
+      <div class="proj-modal-section-title">Lots couverts</div>
+      <div class="proj-modal-tags" id="projModalTags"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Votre projet sera-t-il notre prochaine référence ?</h2>
+    <p>Parlons-en. Étude de prix, études d'exécution, maîtrise d'œuvre électrique — décrivez-nous votre opération en quelques mots.</p>
+    <a href="index.html#contact" class="btn btn-green">Démarrer un projet
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo" style="text-decoration:none;" aria-label="Study Elec — Études &amp; Conseils">
+          <img class="logo-img" src="assets/logo-header.png" srcset="assets/logo-header@2x.png 2x" alt="Study Elec — Études &amp; Conseils">
+        </a>
+        <p>Bureau d'études indépendant créé en 2014, spécialisé en ingénierie électrique Courants Forts et Courants Faibles. Qualification OPQIBI 1426 — IRVE.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Expertises</h5>
+        <ul>
+          <li><a href="index.html#services">Maîtrise d'œuvre CFO/CFA</a></li>
+          <li><a href="index.html#services">Études de prix</a></li>
+          <li><a href="index.html#services">Études d'exécution BIM</a></li>
+          <li><a href="index.html#services">Montage de projets</a></li>
+          <li><a href="index.html#services">SSI</a></li>
+          <li><a href="index.html#services">IRVE · OPQIBI 1426</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Société</h5>
+        <ul>
+          <li><a href="index.html#about">À propos</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="references.html">Références</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="https://fr.linkedin.com/company/study-elec" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@study-elec.fr">contact@study-elec.fr</a></li>
+          <li>13 rue du Clos de l'Ormeau</li>
+          <li>86130 St-Georges-lès-Baillargeaux</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 SAS Study Elec · Capital 3 500 € · RCS Poitiers 802 902 445 00039.</div>
+      <div><a href="mentions-legales.html" style="color:inherit; margin-right:18px;">Mentions légales</a><a href="confidentialite.html" style="color:inherit;">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const PROJECTS = [
+    {ph:1,t:"Immeuble COVIVIO — Faubourg Poissonnière",loc:"Paris 75009",s:"8 000 m²",client:"Clémançon",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:2,t:"Immeuble KENNEDY — Avenue du Pdt Kennedy",loc:"Paris 75016",s:"30 937 m²",client:"GTIE Présence",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:3,t:"Multiplexe cinématographique — Pointe Amont",loc:"Boulogne 92100",s:"5 500 m²",client:"CESA",lots:["CFO"],cat:"commerce",ico:"🎬",mission:"Étude d'exécution"},
+    {ph:4,t:"Collège Belle Ombre — ex-IUFM",loc:"Melun 77000",s:"6 365 m² · 800 élèves",client:"Bouygues Bâtiment",lots:["CFO","CFA"],cat:"enseignement",ico:"🏫",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:5,t:"Immeuble bureaux MOTUL — Bd Félix Faure",loc:"Aubervilliers 93300",s:"5 484 m²",client:"Jétrelec",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:6,t:"125 Champs-Élysées — Bureaux",loc:"Paris 75008",s:"3 616 m²",client:"GTIE Présence",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:7,t:"Fondation Bellan — AAE HDJ / ESAT / MAS",loc:"Combs-la-Ville 77380",s:"5 484 m²",client:"Jétrelec",lots:["CFO","CFA"],cat:"sante",ico:"🏥",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:8,t:"Immeuble bureaux — 73 rue de Richelieu",loc:"Paris 75002",s:"—",client:"CESA - ORTEC",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:9,t:"Immeuble — 15 place de la Madeleine",loc:"Paris 75008",s:"1 512 m²",client:"Clémançon",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:10,t:"Bureaux — 50 av. Pierre Mendès France",loc:"Paris 75013",s:"45 200 m²",client:"Clémançon / Phibor",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:11,t:"Atelier de maroquinerie « Les Atelier de MAY »",loc:"Aulnay 17",s:"11 100 m²",client:"Bouygues Énergies &amp; Services / Ineo EQUANS",lots:["CFO","CFA","SSI","GTB"],cat:"industrie",ico:"🏭",mission:"Étude d'exécution"},
+    {ph:12,t:"Immeuble bureaux — Ilot D5",loc:"Boulogne-Billancourt 92",s:"40 000 m²",client:"Apilog Automation / GCC",lots:["GTB"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:13,t:"Hôtel Raphaël — 17 avenue Kléber",loc:"Paris 75116",s:"83 chambres · 8 200 m²",client:"Phibor",lots:["CFO","CFA","SSI"],cat:"hotellerie",ico:"🏨",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:14,t:"Tour Acacia — La Défense",loc:"Puteaux 92800",s:"18 000 m²",client:"Phibor",lots:["CFO","CFA","SSI","GTB"],cat:"bureaux",ico:"🏙️",mission:"Étude d'exécution"},
+    {ph:15,t:"Extension de l'ESTP — Plan Campus 2028",loc:"Cachan 94",s:"8 000 m²",client:"ESTP",lots:["CFO","CFA","SSI","GTB"],cat:"enseignement",ico:"🎓",mission:"Maîtrise d'œuvre",moe:true},
+    {ph:16,t:"Immeuble bureaux — Ilot D5 (SPIE)",loc:"Boulogne-Billancourt 92",s:"40 000 m²",client:"SPIE Batignolles",lots:["CFO"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:17,t:"Immeuble bureaux DASSAULT — RIE",loc:"Saint-Cloud 92",s:"—",client:"BTB / GCC",lots:["CFO","CFA","SSI","GTB"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:18,t:"Tour Bellini (IGH) — La Défense",loc:"La Défense 92",s:"18 300 m²",client:"SPIE",lots:["CFO","CFA"],cat:"bureaux",ico:"🏙️",mission:"Étude d'exécution"},
+    {ph:19,t:"Siège de la Mutualité Française",loc:"Paris 19ème",s:"12 700 m²",client:"CESA",lots:["CFO","CFA","SSI","GTB"],cat:"public",ico:"🏛️",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:20,t:"Hôtel MIXCITE",loc:"Issy-les-Moulineaux 92",s:"347 chambres · 11 290 m²",client:"CESA",lots:["CFO","CFA","SSI","GTB"],cat:"hotellerie",ico:"🏨",mission:"Étude d'exécution"},
+    {ph:21,t:"Site LEGRAND — Projet B-Connect",loc:"Bagnolet 93",s:"17 350 m²",client:"INEO (Equans)",lots:["CFO","CFA","SSI","GTB"],cat:"industrie",ico:"🏭",mission:"Étude d'exécution"},
+    {ph:22,t:"Entrepôt logistique SEGRO",loc:"Élancourt 78",s:"13 000 m²",client:"Jétrelec",lots:["CFO","CFA","SSI","GTB"],cat:"logistique",ico:"📦",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:23,t:"Restructuration énergétique du COB",loc:"Mantes-la-Jolie 78",s:"—",client:"CESA",lots:["CFO","CFA","SSI","GTB"],cat:"public",ico:"⚡",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:24,t:"IRM — Centre hospitalier de Sens",loc:"Sens 89",s:"—",client:"CH Sens",lots:["CFO","CFA","SSI"],cat:"sante",ico:"🏥",mission:"Maîtrise d'œuvre",moe:true},
+    {ph:25,t:"Bureaux / Labos SAINT-GOBAIN",loc:"Aubervilliers 93",s:"5 700 m²",client:"Spie Batignolles Immobilier",lots:["CFO","CFA","SSI","GTB"],cat:"industrie",ico:"🧪",mission:"Maîtrise d'œuvre",moe:true},
+    {ph:27,t:"Immeuble bureaux Envergure",loc:"Romainville 93",s:"50 918 m²",client:"Phibor",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:28,t:"Arena Futuroscope",loc:"Poitiers 86",s:"12 215 m²",client:"Lumelec",lots:["CFO"],cat:"public",ico:"🎪",mission:"Étude d'exécution"},
+    {ph:29,t:"Campus ENGIE",loc:"La Garenne-Colombes 92",s:"94 000 m²",client:"SPIE",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:30,t:"EHPAD de Melun",loc:"Melun 77",s:"184 lits",client:"Jétrelec",lots:["CFO","CFA"],cat:"sante",ico:"🏥",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:31,t:"Urgences de l'hôpital Percy",loc:"Clamart 92",s:"—",client:"SPIE",lots:["CFO","CFA"],cat:"sante",ico:"🏥",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:32,t:"Hôtel Cosmos Futuroscope",loc:"Poitiers 86",s:"76 chambres · 4 841 m²",client:"Lumelec",lots:["CFO","CFA","GTB"],cat:"hotellerie",ico:"🏨",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:33,t:"Hôtel CITIZEN M — Croissant",loc:"Paris 75",s:"151 chambres · 2 691 m²",client:"BTB / GCC",lots:["CFO","CFA"],cat:"hotellerie",ico:"🏨",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:34,t:"Hôtel CITIZEN M — Boétie",loc:"Paris 75",s:"84 chambres · 4 600 m²",client:"BTB / GCC",lots:["CFO","CFA"],cat:"hotellerie",ico:"🏨",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:35,t:"Immeuble bureaux Arboretum",loc:"Nanterre 92",s:"125 000 m²",client:"Apilog Automation / GCC",lots:["GTB"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution"},
+    {ph:36,t:"Tour ERIA",loc:"Puteaux 92",s:"26 000 m²",client:"Apilog Automation / GCC",lots:["GTB"],cat:"bureaux",ico:"🏙️",mission:"Étude d'exécution",missions:['Plans d\'implantation et repérage GTB']},
+    {ph:37,t:"Immeuble bureaux E-CONIC",loc:"Clichy 92",s:"13 600 m²",client:"Phibor",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:38,t:"Extension Centre Commercial Créteil Soleil",loc:"Créteil 94",s:"11 000 m²",client:"Bouygues Bâtiment",lots:["CFO","CFA"],cat:"commerce",ico:"🛒",mission:"Étude d'exécution"},
+    {ph:39,t:"LE MORLAN (IGH) — Hôtel + Bureaux",loc:"Paris 75",s:"Hôtel 161 ch · 10 597 m² + 9 171 m²",client:"Phibor / Bouygues",lots:["CFO"],cat:"bureaux",ico:"🏙️",mission:"Étude d'exécution"},
+    {ph:40,t:"Immeuble bureaux FULTON",loc:"Fontenay-sous-Bois 94",s:"30 900 m²",client:"TTI Fayat",lots:["CFO","CFA","GTB"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:41,t:"Bureaux — 16 Matignon",loc:"Paris 75",s:"11 000 m²",client:"TTI Fayat",lots:["CFO","CFA"],cat:"bureaux",ico:"🏢",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:42,t:"Palais de Justice",loc:"Poitiers 86",s:"—",client:"INEO EQUANS",lots:["CFO","CFA","SSI","GTB"],cat:"public",ico:"🏛️",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+    {ph:43,t:"Collège 600 places",loc:"Vulaines-sur-Seine 77",s:"600 élèves",client:"BTB / GCC",lots:["CFO","CFA","SSI","GTB"],cat:"enseignement",ico:"🏫",mission:"Étude d'exécution",missions:['Plans de cheminement et réservation','Plans d\'implantation des terminaux CFO/CFA','Carnet des incorporations','Note de calcul BT','Schémas TGBT et TD','Synoptique CFO','Synoptique CFA (VDI, Sûreté, GTB, …)']},
+  ];
+
+  const grid = document.getElementById('grid');
+  const chipsEl = document.getElementById('chips');
+
+  function render(cat){
+    grid.innerHTML = '';
+    const list = cat === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat === cat);
+    if (!list.length) { grid.innerHTML = '<div class="empty">Aucun projet dans cette catégorie.</div>'; return; }
+    list.forEach(p => {
+      const idx = PROJECTS.indexOf(p);
+      const card = document.createElement('article');
+      card.className = 'proj';
+      card.setAttribute('role','button');
+      card.setAttribute('tabindex','0');
+      card.setAttribute('aria-label','Voir le détail du projet '+p.t);
+      card.dataset.idx = idx;
+      const photoNum = String(p.ph || (idx + 1)).padStart(2, '0');
+      card.innerHTML = `
+        <div class="proj-cover c-${p.cat}">
+          <img class="proj-photo" src="assets/projets/proj_${photoNum}.jpg" alt="${p.t}" loading="lazy" onerror="this.style.display='none'">
+          <span class="type-icon">${p.ico}</span>
+          <span class="badge">${p.mission}</span>
+          <span class="proj-more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>${p.loc}</div>
+          <h3>${p.t}</h3>
+          <div class="proj-stats">
+            ${p.s && p.s !== '—' ? `<span class="proj-stat"><strong>${p.s}</strong></span>` : ''}
+          </div>
+          <div class="proj-client">Client : <strong>${p.client}</strong></div>
+          <div class="proj-tags">${p.lots.map(l => `<span class="proj-tag">${l}</span>`).join('')}${p.moe ? '<span class="proj-tag moe">MOE</span>' : ''}</div>
+        </div>`;
+      grid.appendChild(card);
+    });
+  }
+
+  chipsEl.addEventListener('click', e => {
+    const btn = e.target.closest('.chip');
+    if (!btn) return;
+    chipsEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.cat);
+  });
+
+  render('all');
+
+  /* ───────── PROJECT MODAL ───────── */
+  // Catégorie -> libellé & visuel de bandeau modal
+  const CAT_META = {
+    bureaux: {label: 'Tertiaire · Bureaux', gradient: 'linear-gradient(135deg,#1B3A6C,#2A4F8A 70%,#3CAEC8)'},
+    hotellerie: {label: 'Hôtellerie', gradient: 'linear-gradient(135deg,#0F2547,#1B3A6C 60%,#7AB32F)'},
+    sante: {label: 'Santé', gradient: 'linear-gradient(135deg,#1B3A6C,#2B97B3)'},
+    enseignement: {label: 'Enseignement', gradient: 'linear-gradient(135deg,#0F2547,#7AB32F)'},
+    commerce: {label: 'Commerce & Culture', gradient: 'linear-gradient(135deg,#2A4F8A,#3CAEC8)'},
+    industrie: {label: 'Industrie & Labs', gradient: 'linear-gradient(135deg,#0F2547,#5F8F1F 80%,#8DC63F)'},
+    logistique: {label: 'Logistique', gradient: 'linear-gradient(135deg,#5C6B7C,#1B3A6C)'},
+    public: {label: 'ERP / Public', gradient: 'linear-gradient(135deg,#0F2547,#2B97B3)'}
+  };
+
+  // Descriptions spécifiques pour les projets notables (1-2 phrases).
+  // Pour les autres, une description est générée automatiquement à partir des données.
+  const PROJ_DESC = {
+    1: "Rénovation lourde d'un immeuble de bureaux premium pour le foncier <strong>COVIVIO</strong>, en plein cœur du 9ᵉ arrondissement parisien.",
+    2: "Vaste opération de rénovation tertiaire face à la Seine, sur l'Avenue du Président Kennedy dans le 16ᵉ parisien.",
+    3: "Aménagement d'un <strong>multiplexe cinématographique</strong> sur la Pointe Amont de l'Île Seguin, site emblématique du Grand Paris.",
+    4: "Restructuration et extension de l'ancien IUFM en <strong>collège 800 élèves</strong>, opération Bouygues Bâtiment en Seine-et-Marne.",
+    5: "Siège social MOTUL — immeuble tertiaire en périphérie parisienne.",
+    6: "Rénovation d'un immeuble de bureaux haussmannien sur la plus belle avenue du monde.",
+    7: "Relocalisation et reconstruction d'un pôle de la <strong>Fondation Bellan</strong> — AAE, HDJ, ESAT et MAS réunis sur un seul site.",
+    9: "Rénovation d'un immeuble de bureaux sur la prestigieuse place de la Madeleine.",
+    10: "Très grande opération tertiaire de 45 200 m² dans le 13ᵉ — un des plus gros chantiers du portfolio.",
+    11: "Construction d'un <strong>atelier de maroquinerie de luxe</strong> en Charente-Maritime, pour un grand donneur d'ordre du secteur.",
+    13: "<strong>Hôtel 5 étoiles historique</strong> avenue Kléber — 83 chambres entièrement rénovées avec une exigence patrimoniale et technique maximale.",
+    14: "Tour de bureaux sur le parvis de <strong>La Défense</strong> — CFO, CFA, SSI et GTB intégrés.",
+    15: "Mission <strong>Maîtrise d'œuvre</strong> sur l'extension du campus ESTP dans le cadre du Plan Campus 2028.",
+    18: "<strong>Immeuble de Grande Hauteur (IGH)</strong> emblématique de La Défense — 18 300 m² de bureaux haut de gamme pour SPIE.",
+    19: "Réhabilitation du <strong>siège de la Mutualité Française</strong>, bâtiment iconique signé Fernand Pouillon dans le 19ᵉ.",
+    20: "Vaste hôtel urbain <strong>347 chambres</strong> à Issy-les-Moulineaux, pôle tertiaire du Grand Paris.",
+    21: "Transformation du site historique de <strong>LEGRAND</strong> à Bagnolet en projet B-Connect, vitrine technologique du groupe.",
+    22: "<strong>Entrepôt logistique dernière génération</strong> pour SEGRO, acteur mondial de l'immobilier logistique.",
+    23: "<strong>Rénovation énergétique complète</strong> du Centre Opérationnel de Bus (COB) RATP — performance et transition verte.",
+    24: "Mission <strong>Maîtrise d'œuvre</strong> : ajout d'un plateau technique d'imagerie (IRM, scanner) au Centre Hospitalier de Sens.",
+    25: "Mission <strong>Maîtrise d'œuvre</strong> : bureaux et laboratoires R&amp;D pour le groupe <strong>Saint-Gobain</strong>.",
+    27: "Opération emblématique de <strong>50 918 m²</strong> à Romainville — un des plus grands programmes tertiaires d'Île-de-France.",
+    28: "<strong>Arena Futuroscope</strong> — équipement culturel et événementiel majeur de la Vienne, complexe multifonction.",
+    29: "<strong>Campus ENGIE</strong> — 94 000 m² sur 3 bâtiments (A, B et Cœur) pour le siège social du géant de l'énergie.",
+    30: "<strong>EHPAD 184 lits</strong> à Melun — établissement médicalisé récent pour seniors dépendants.",
+    31: "<strong>Service des Urgences</strong> de l'hôpital militaire Percy — projet sensible à forte contrainte technique.",
+    32: "Hôtel 4★ <strong>76 chambres</strong> sur le parc du Futuroscope.",
+    33: "Hôtel design <strong>CITIZEN M</strong> — 151 chambres, concept innovant au cœur de Paris.",
+    34: "Hôtel <strong>CITIZEN M</strong> rue La Boétie — 84 chambres, 8ᵉ arrondissement.",
+    35: "<strong>Arboretum</strong> Nanterre — ensemble tertiaire de 125 000 m², l'un des plus grands campus bois d'Europe.",
+    36: "<strong>Tour ERIA</strong> — immeuble signature du quartier d'affaires de La Défense.",
+    38: "Extension du <strong>centre commercial Créteil Soleil</strong> — un des plus grands CC d'Île-de-France.",
+    39: "<strong>Tour IGH LE MORLAN</strong> — programme mixte hôtel 161 chambres + bureaux, opération Bouygues.",
+    41: "Immeuble de bureaux prestige <strong>16 avenue Matignon</strong>, 8ᵉ arrondissement.",
+    42: "<strong>Palais de Justice de Poitiers</strong> — réhabilitation d'un équipement public patrimonial."
+  };
+
+  // Templates de missions selon le type de prestation
+  const MISSIONS_EXEC = [
+    'Plans de cheminement et réservation (REVIT)',
+    "Plans d'implantation des terminaux CFO/CFA (REVIT)",
+    'Carnet des incorporations (REVIT)',
+    'Note de calcul BT',
+    'Schémas TGBT et TD',
+    'Synoptique CFO',
+    'Synoptique CFA (VDI, Sûreté, GTB, …)'
+  ];
+  const MISSIONS_MOE = [
+    'Rédaction du CCTP',
+    'Notes de calcul éclairage fonctionnels et décoration',
+    'Plans de cheminement',
+    'Note de calcul BT',
+    'Schémas TGBT et TD',
+    'Synoptique CFO',
+    "Plans d'implantation et repérage CFO",
+    'Synoptique CFA (Contrôle d\'accès, Alarme intrusion, VDI, GTB, …)',
+    "Plans d'implantation et repérage CFA / SSI",
+    'Synoptique SSI'
+  ];
+  const MISSIONS_GTB = [
+    "Plans d'implantation et repérage GTB (REVIT)"
+  ];
+
+  function missionsFor(p){
+    if (p.missions && p.missions.length) return p.missions; // Prestations personnalisées
+    if (p.moe) return MISSIONS_MOE;
+    if (p.lots.length === 1 && p.lots[0] === 'GTB') return MISSIONS_GTB;
+    // Restrict CFA line based on actual lots present
+    const missions = MISSIONS_EXEC.slice();
+    if (!p.lots.includes('CFA')) {
+      // Projet purement CFO : retire la ligne CFA
+      return missions.filter(m => !m.startsWith('Synoptique CFA') && !m.startsWith("Plans d'implantation des terminaux CFO/CFA"))
+        .concat(["Plans d'implantation des terminaux CFO (REVIT)"]);
+    }
+    return missions;
+  }
+
+  function autoDesc(p){
+    const typeMap = {
+      bureaux: "immeuble tertiaire",
+      hotellerie: `hôtel (${p.s||'programme hôtelier'})`,
+      sante: "établissement de santé",
+      enseignement: "établissement d'enseignement",
+      commerce: "équipement commercial",
+      industrie: "site industriel",
+      logistique: "plateforme logistique",
+      public: "équipement public"
+    };
+    const verb = p.moe ? "Mission de <strong>Maîtrise d'œuvre</strong> sur" : "Études d'exécution sur";
+    return `${verb} un ${typeMap[p.cat] || 'projet'} — client <strong>${p.client}</strong>. Prestations pluridisciplinaires CFO${p.lots.includes('CFA') ? '/CFA':''}${p.lots.includes('SSI') ? ', SSI':''}${p.lots.includes('GTB') ? ', GTB':''}.`;
+  }
+
+  const modal = document.getElementById('projModal');
+  const mCover = document.getElementById('projModalCover');
+  const mPhoto = document.getElementById('projModalPhoto');
+  const mIcon = document.getElementById('projModalIconFloat');
+  const mBadge = document.getElementById('projModalBadge');
+  const mTitle = document.getElementById('projModalTitle');
+  const mLoc = document.getElementById('projModalLoc');
+  const mDesc = document.getElementById('projModalDesc');
+  const mStats = document.getElementById('projModalStats');
+  const mMissions = document.getElementById('projModalMissions');
+  const mTags = document.getElementById('projModalTags');
+  const mClose = document.getElementById('projModalClose');
+
+  function openProj(idx){
+    const p = PROJECTS[idx]; if (!p) return;
+    const meta = CAT_META[p.cat] || CAT_META.bureaux;
+    mCover.style.background = meta.gradient;
+    const photoNum = String(p.ph || (idx + 1)).padStart(2, '0');
+    mPhoto.src = `assets/projets/proj_${photoNum}.jpg`;
+    mPhoto.alt = p.t;
+    mPhoto.style.display = '';
+    mIcon.textContent = p.ico;
+    mBadge.textContent = meta.label + (p.moe ? ' · Maîtrise d\'œuvre' : ' · ' + p.mission);
+    mTitle.textContent = p.t;
+    mLoc.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>'+p.loc;
+    mDesc.innerHTML = PROJ_DESC[p.ph] || autoDesc(p);
+
+    // Stats block
+    const stats = [];
+    if (p.s && p.s !== '—') stats.push({l:'Surface / Capacité', v:p.s});
+    stats.push({l:'Client', v:p.client});
+    stats.push({l:'Mission', v: p.moe ? "Maîtrise d'œuvre" : p.mission});
+    mStats.innerHTML = stats.map(s=>`<div><div class="proj-modal-stat-label">${s.l}</div><div class="proj-modal-stat-value">${s.v}</div></div>`).join('');
+
+    // Missions
+    mMissions.innerHTML = missionsFor(p).map(m=>`<li>${m}</li>`).join('');
+
+    // Tags
+    mTags.innerHTML = p.lots.map(l=>`<span class="proj-tag">${l}</span>`).join('') + (p.moe?'<span class="proj-tag moe">MOE</span>':'');
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProj(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  grid.addEventListener('click', e => {
+    const card = e.target.closest('.proj[data-idx]');
+    if (!card) return;
+    openProj(parseInt(card.dataset.idx,10));
+  });
+  grid.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const card = e.target.closest('.proj[data-idx]');
+    if (!card) return;
+    e.preventDefault();
+    openProj(parseInt(card.dataset.idx,10));
+  });
+  mClose.addEventListener('click', closeProj);
+  modal.addEventListener('click', e => { if (e.target === modal) closeProj(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeProj(); });
+
+  // Nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>

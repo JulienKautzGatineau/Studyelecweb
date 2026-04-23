@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>L'équipe Study Elec — Bureau d'études Électricité</title>
+<meta name="description" content="Découvrez l'équipe de Study Elec : ingénieurs, techniciens et chargés d'études spécialisés en électricité tertiaire. Basés à Saint-Georges-lès-Baillargeaux (86)." />
+<link rel="icon" type="image/png" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
+<link rel="shortcut icon" href="assets/apple-touch-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B3A6C;
+    --navy-2: #2A4F8A;
+    --navy-deep: #0F2547;
+    --lime: #8DC63F;
+    --lime-2: #7AB32F;
+    --cyan: #3CAEC8;
+    --cyan-2: #2B97B3;
+    --ink: #0F2547;
+    --bg: #FAFBF7;
+    --bg-2: #F1F4EC;
+    --white: #FFFFFF;
+    --grey: #5C6B7C;
+    --line: rgba(27, 58, 108, 0.1);
+    --radius: 18px;
+    --shadow-sm: 0 1px 3px rgba(27,58,108,.06), 0 1px 2px rgba(27,58,108,.04);
+    --shadow-md: 0 10px 30px rgba(27,58,108,.08), 0 2px 6px rgba(27,58,108,.04);
+    --shadow-lg: 0 30px 60px rgba(27,58,108,.15), 0 10px 20px rgba(27,58,108,.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; max-width: 100vw; }
+  img, svg, video, iframe { max-width: 100%; height: auto; display: block; }
+  p, h1, h2, h3, h4, h5, li, a, span, div { word-wrap: break-word; overflow-wrap: anywhere; }
+  input, select, textarea, button { max-width: 100%; font-family: inherit; }
+  h1, h2, h3, h4 { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -.02em; line-height: 1.1; color: var(--navy); }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+  a { color: inherit; }
+
+  /* Navbar — identique au site principal */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,251,247,.85);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid transparent; transition: border-color .3s, background .3s;
+  }
+  nav.scrolled { border-bottom-color: var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 94px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo img.logo-img { display: block; height: 72px; width: auto; }
+  .footer-about .logo img.logo-img { height: 72px; background: #fff; padding: 8px 14px; border-radius: 10px; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo-text .name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--navy); letter-spacing: -.02em; }
+  .logo-text .tag { font-size: .67rem; color: var(--lime-2); font-weight: 700; letter-spacing: .08em; margin-top: 3px; }
+  .nav-links { display: flex; gap: 34px; align-items: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: .93rem; font-weight: 500; opacity: .8; transition: opacity .2s, color .2s; position: relative; }
+  .nav-links a:hover { opacity: 1; color: var(--navy); }
+  .nav-links a.active { opacity: 1; color: var(--navy); font-weight: 600; }
+  .nav-links a.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: linear-gradient(90deg, var(--lime), var(--cyan)); }
+  .nav-cta { background: var(--navy); color: var(--white) !important; padding: 12px 24px; border-radius: 12px; font-weight: 600 !important; opacity: 1 !important; transition: transform .2s, box-shadow .2s, background .2s; }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(27,58,108,.3); background: var(--navy-deep); }
+  .burger { display: none; background: none; border: none; padding: 8px; cursor: pointer; }
+  .burger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; transition: .3s; }
+
+  /* Hero */
+  .page-hero {
+    padding: 160px 0 80px;
+    position: relative; overflow: hidden;
+    text-align: center;
+  }
+  .page-hero::before {
+    content: ''; position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 20% 20%, rgba(141,198,63,.18), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 85% 80%, rgba(60,174,200,.16), transparent 60%);
+  }
+  .page-hero::after {
+    content: ''; position: absolute; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(27,58,108,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27,58,108,.045) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, black, transparent);
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, black, transparent);
+  }
+  .page-hero-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--white); border: 1px solid var(--line);
+    padding: 8px 16px; border-radius: 999px;
+    font-size: .82rem; font-weight: 500; color: var(--navy);
+    box-shadow: var(--shadow-sm); margin-bottom: 26px;
+  }
+  .eyebrow .dot { width: 8px; height: 8px; background: var(--lime); border-radius: 50%; box-shadow: 0 0 0 4px rgba(141,198,63,.25); animation: pulseDot 2s infinite; }
+  @keyframes pulseDot { 0%,100% { box-shadow: 0 0 0 0 rgba(141,198,63,.6);} 70% { box-shadow: 0 0 0 10px rgba(141,198,63,0);} }
+  .page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; margin-bottom: 22px; line-height: 1.1; }
+  .page-hero h1 .accent { background: linear-gradient(120deg, var(--lime-2), var(--lime)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .page-hero p { color: var(--grey); font-size: 1.15rem; line-height: 1.7; max-width: 720px; margin: 0 auto; }
+
+  /* Team grid */
+  .team-section { padding: 60px 0 100px; position: relative; }
+  .team-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 20px; margin-bottom: 70px;
+  }
+  .stat-card {
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 28px 24px;
+    text-align: center;
+    transition: transform .3s, box-shadow .3s;
+  }
+  .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .stat-card .n { font-family: 'Space Grotesk', sans-serif; font-size: 2.6rem; font-weight: 700; color: var(--navy); letter-spacing: -.03em; line-height: 1; }
+  .stat-card .n .accent-g { background: linear-gradient(120deg, var(--lime-2), var(--lime)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stat-card .n .accent-c { background: linear-gradient(120deg, var(--cyan-2), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stat-card .l { font-size: .9rem; color: var(--grey); margin-top: 8px; }
+
+  /* ─── IMPLANTATIONS ─── */
+  .locations-wrap { margin: 60px 0 80px; }
+  .locations-head { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+  .locations-head .tag { display: inline-block; padding: 6px 14px; background: var(--bg-2); color: var(--navy); border-radius: 999px; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 14px; }
+  .locations-head h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); color: var(--navy); font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+  .locations-head h2 .accent { background: linear-gradient(120deg, var(--cyan-2), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .locations-head p { color: var(--grey); font-size: 1rem; line-height: 1.6; }
+  .locations-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 18px; }
+  .location-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 28px 28px 26px; position: relative; overflow: hidden; transition: transform .3s, box-shadow .3s, border-color .3s; }
+  .location-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: transparent; }
+  .location-card::before { content: ''; position: absolute; inset: auto 0 0 0; height: 3px; background: linear-gradient(90deg, var(--lime), var(--cyan)); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
+  .location-card:hover::before { transform: scaleX(1); }
+  .location-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .location-pin { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; color: var(--white); flex-shrink: 0; }
+  .location-pin.lime { background: linear-gradient(135deg, var(--lime-2), var(--lime)); color: var(--navy); }
+  .location-pin.cyan { background: linear-gradient(135deg, var(--cyan-2), var(--cyan)); }
+  .location-pin svg { width: 22px; height: 22px; }
+  .location-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--navy); }
+  .location-card .region { font-size: .78rem; color: var(--grey); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; margin-top: 2px; }
+  .location-card p { color: var(--grey); font-size: .95rem; line-height: 1.6; }
+  .locations-global { display: flex; align-items: center; gap: 18px; background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: var(--white); border-radius: 18px; padding: 22px 28px; }
+  .locations-global-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(141,198,63,.2); color: var(--lime); display: grid; place-items: center; flex-shrink: 0; }
+  .locations-global-icon svg { width: 24px; height: 24px; }
+  .locations-global h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
+  .locations-global p { color: rgba(255,255,255,.92); font-size: .95rem; line-height: 1.55; }
+  @media (max-width: 780px) {
+    .locations-grid { grid-template-columns: 1fr; }
+    .locations-global { flex-direction: column; align-items: flex-start; text-align: left; padding: 20px 22px; }
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .member {
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: 22px; padding: 36px 30px 30px;
+    transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, border-color .3s;
+    position: relative; overflow: hidden;
+  }
+  .member::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, var(--lime), var(--cyan));
+    transform: scaleX(0); transform-origin: left; transition: transform .5s cubic-bezier(.2,.8,.2,1);
+  }
+  .member:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: transparent; }
+  .member:hover::before { transform: scaleX(1); }
+
+  /* Avatar SVG — initiales stylées (pas de photo) */
+  .avatar {
+    width: 92px; height: 92px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.7rem;
+    color: var(--white);
+    margin-bottom: 22px;
+    position: relative;
+    transition: transform .4s cubic-bezier(.2,.8,.2,1);
+  }
+  .member:hover .avatar { transform: scale(1.06) rotate(-3deg); }
+  .avatar::before {
+    content: ''; position: absolute; inset: -4px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--lime), var(--cyan));
+    z-index: -1; opacity: .3;
+    transition: opacity .3s, inset .3s;
+  }
+  .member:hover .avatar::before { opacity: .6; inset: -8px; }
+
+  .avatar.av-navy { background: linear-gradient(135deg, var(--navy), var(--navy-2)); box-shadow: 0 10px 24px rgba(27,58,108,.3); }
+  .avatar.av-lime { background: linear-gradient(135deg, var(--lime-2), var(--lime)); color: var(--navy); box-shadow: 0 10px 24px rgba(141,198,63,.35); }
+  .avatar.av-cyan { background: linear-gradient(135deg, var(--cyan-2), var(--cyan)); box-shadow: 0 10px 24px rgba(60,174,200,.3); }
+  .avatar.av-mixed { background: linear-gradient(135deg, var(--lime), var(--cyan)); box-shadow: 0 10px 24px rgba(60,174,200,.3); }
+
+  .member h3 { font-size: 1.35rem; margin-bottom: 4px; font-weight: 700; }
+  .member .role {
+    display: inline-block;
+    background: rgba(141,198,63,.15); color: var(--lime-2);
+    padding: 4px 12px; border-radius: 999px;
+    font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+    margin-bottom: 18px;
+  }
+  .member:nth-child(3n+1) .role { background: rgba(141,198,63,.15); color: var(--lime-2); }
+  .member:nth-child(3n+2) .role { background: rgba(60,174,200,.15); color: var(--cyan-2); }
+  .member:nth-child(3n) .role { background: rgba(27,58,108,.1); color: var(--navy); }
+
+  .member p.bio { color: var(--grey); font-size: .95rem; line-height: 1.65; margin-bottom: 18px; }
+
+  .member .skills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  .skill {
+    background: var(--bg-2); border: 1px solid var(--line);
+    padding: 4px 11px; border-radius: 999px;
+    font-size: .72rem; color: var(--navy); font-weight: 500;
+    transition: background .2s, color .2s;
+  }
+  .member:hover .skill { background: var(--white); }
+
+  .member .meta { display: flex; align-items: center; gap: 8px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .82rem; color: var(--grey); }
+  .member .meta svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* Values section */
+  .values {
+    background: var(--white); padding: 100px 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .values-head { text-align: center; max-width: 720px; margin: 0 auto 60px; }
+  .section-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(141,198,63,.18); color: var(--lime-2);
+    padding: 6px 14px; border-radius: 999px;
+    font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+    margin-bottom: 18px;
+  }
+  .section-tag::before { content: ''; width: 6px; height: 6px; background: var(--lime); border-radius: 50%; }
+  .values-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 18px; font-weight: 700; }
+  .values-head p { color: var(--grey); font-size: 1.05rem; line-height: 1.7; }
+
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .value-card {
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 30px 28px;
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+  }
+  .value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); border-color: rgba(141,198,63,.3); }
+  .value-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: grid; place-items: center; margin-bottom: 18px;
+    color: var(--white);
+  }
+  .value-card:nth-child(3n+1) .value-icon { background: linear-gradient(135deg, var(--navy), var(--navy-2)); }
+  .value-card:nth-child(3n+2) .value-icon { background: linear-gradient(135deg, var(--lime-2), var(--lime)); color: var(--navy); }
+  .value-card:nth-child(3n) .value-icon { background: linear-gradient(135deg, var(--cyan-2), var(--cyan)); }
+  .value-icon svg { width: 22px; height: 22px; }
+  .value-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+  .value-card p { color: var(--grey); font-size: .92rem; line-height: 1.6; }
+
+  /* CTA */
+  .join {
+    padding: 100px 0;
+    position: relative; overflow: hidden;
+  }
+  .join::before {
+    content: ''; position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(141,198,63,.15), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 10% 80%, rgba(60,174,200,.14), transparent 60%);
+  }
+  .join-inner {
+    position: relative; z-index: 1;
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, var(--cyan-2) 130%);
+    color: var(--white);
+    border-radius: 28px; padding: 70px 60px;
+    display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap;
+    overflow: hidden; position: relative;
+  }
+  .join-inner::before {
+    content: ''; position: absolute; top: -30%; right: -10%;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(141,198,63,.28), transparent 60%);
+    animation: drift 15s ease-in-out infinite;
+  }
+  .join-inner::after {
+    content: ''; position: absolute; bottom: -30%; left: -10%;
+    width: 420px; height: 420px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(60,174,200,.25), transparent 60%);
+    animation: drift 18s ease-in-out infinite reverse;
+  }
+  @keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(30px,-40px) scale(1.15); } }
+  .join-inner > div { position: relative; z-index: 1; }
+  .join-inner h2 { color: var(--white); font-size: clamp(1.7rem, 3vw, 2.3rem); max-width: 580px; margin-bottom: 12px; }
+  .join-inner p { color: rgba(255,255,255,.75); max-width: 520px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 12px;
+    font-weight: 600; font-size: .98rem;
+    text-decoration: none;
+    transition: transform .3s, box-shadow .3s, background .25s;
+    position: relative; z-index: 1;
+    border: none; cursor: pointer;
+  }
+  .btn-green { background: var(--lime); color: var(--navy); box-shadow: 0 12px 30px rgba(141,198,63,.35); }
+  .btn-green:hover { background: var(--lime-2); transform: translateY(-3px); box-shadow: 0 20px 40px rgba(141,198,63,.5); }
+  .btn svg { width: 18px; height: 18px; transition: transform .3s; }
+  .btn:hover svg { transform: translateX(4px); }
+
+  /* Footer */
+  footer {
+    background: var(--navy-deep); color: rgba(255,255,255,.8);
+    padding: 80px 0 30px; position: relative; overflow: hidden;
+  }
+  footer::before { content: ''; position: absolute; top: -20%; right: -5%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(141,198,63,.12), transparent 60%); }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 40px; position: relative; z-index: 1; }
+  .footer-about p { font-size: .92rem; line-height: 1.7; opacity: .75; max-width: 340px; margin-top: 18px; }
+  .footer-col h5 { color: var(--white); font-size: .85rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 18px; font-weight: 700; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a { color: rgba(255,255,255,.7); text-decoration: none; font-size: .93rem; transition: color .2s; }
+  .footer-col a:hover { color: var(--lime); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,.1); padding-top: 26px; flex-wrap: wrap; gap: 16px; font-size: .85rem; opacity: .65; position: relative; z-index: 1; }
+
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal.delay-1 { transition-delay: .08s; }
+  .reveal.delay-2 { transition-delay: .16s; }
+  .reveal.delay-3 { transition-delay: .24s; }
+  .reveal.delay-4 { transition-delay: .32s; }
+  .reveal.delay-5 { transition-delay: .4s; }
+
+  /* Mobile */
+  @media (max-width: 1100px) {
+    .container { padding: 0 24px; }
+    .team-stats { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; }
+    .footer-about { grid-column: 1 / -1; }
+  }
+  @media (max-width: 900px) {
+    .nav-inner { height: 70px; }
+    .nav-links { position: fixed; top: 70px; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; padding: 16px 24px 24px; gap: 0; border-bottom: 1px solid var(--line); box-shadow: var(--shadow-md); transform: translateY(-150%); transition: transform .3s; }
+    .nav-links.open { transform: translateY(0); }
+    .nav-links a { padding: 16px 4px; border-bottom: 1px solid var(--line); font-size: 1rem; }
+    .nav-links a:last-child { border: none; margin-top: 12px; text-align: center; padding: 14px 22px; }
+    .nav-links a.active::after { display: none; }
+    .burger { display: block; }
+    .logo img.logo-img { height: 58px; }
+    .logo-svg { width: 48px; height: 40px; }
+    .logo-text .name { font-size: 1.15rem; }
+    .logo-text .tag { font-size: .6rem; }
+
+    .page-hero { padding: 110px 0 50px; }
+    .page-hero h1 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+    .page-hero p { font-size: 1rem; }
+    .team-section { padding: 40px 0 70px; }
+    .team-grid { grid-template-columns: 1fr; gap: 16px; }
+    .team-stats { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .stat-card .n { font-size: 2.1rem; }
+    .member { padding: 28px 24px; }
+    .avatar { width: 76px; height: 76px; font-size: 1.4rem; }
+    .values { padding: 70px 0; }
+    .values-grid { grid-template-columns: 1fr; gap: 14px; }
+    .join { padding: 70px 0; }
+    .join-inner { padding: 50px 28px; flex-direction: column; text-align: center; align-items: center; border-radius: 22px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    .footer-about { grid-column: 1 / -1; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+  @media (max-width: 520px) {
+    .container { padding: 0 18px; }
+    .page-hero { padding: 100px 0 40px; }
+    .team-stats { grid-template-columns: 1fr; }
+    .stat-card { padding: 22px; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="Study Elec — Études &amp; Conseils">
+      <img class="logo-img" src="assets/logo-header.png" srcset="assets/logo-header@2x.png 2x" alt="Study Elec — Études &amp; Conseils">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#services">Services</a>
+      <a href="equipe.html" class="active">Équipe</a>
+      <a href="references.html">Références</a>
+      <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow reveal"><span class="dot"></span>L'équipe Study Elec · 10 experts</div>
+    <h1 class="reveal delay-1">Des équipes<br><span class="accent">expertes &amp; engagées.</span></h1>
+    <p class="reveal delay-2">
+      Study Elec s'appuie sur une <strong>équipe pluridisciplinaire de 10 personnes expérimentée</strong>, pilotée par <strong>Laurent Gatineau</strong>, fort de plus de <strong>37 ans d'expérience</strong> en ingénierie électrique. Nos compétences couvrent CFO/CFA, BIM, SSI, éclairage, études de prix et conception — une diversité de profils qui nous permet d'apporter des réponses concrètes et opérationnelles, adaptées à chaque projet. <strong>Implantés en Bretagne et en Nouvelle-Aquitaine</strong>, nous accompagnons des projets dans toute la France et à l'international.
+    </p>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="container">
+
+    <div class="team-stats">
+      <div class="stat-card reveal"><div class="n"><span class="accent-g">10</span></div><div class="l">Collaborateurs experts</div></div>
+      <div class="stat-card reveal delay-1"><div class="n">37<span class="accent-c">+</span></div><div class="l">Années direction (Laurent)</div></div>
+      <div class="stat-card reveal delay-2"><div class="n">2014</div><div class="l">Année de création</div></div>
+      <div class="stat-card reveal delay-3"><div class="n">100<span class="accent-g">%</span></div><div class="l">BIM · REVIT</div></div>
+    </div>
+
+    <!-- Implantations & zone d'intervention -->
+    <div class="locations-wrap reveal">
+      <div class="locations-head">
+        <span class="tag">Implantations</span>
+        <h2>Deux bases en France, <span class="accent">une couverture nationale &amp; internationale.</span></h2>
+        <p>Study Elec opère depuis deux sites complémentaires et accompagne des projets partout en France — ainsi qu'à l'étranger pour ses clients grands comptes.</p>
+      </div>
+      <div class="locations-grid">
+        <div class="location-card">
+          <div class="location-card-head">
+            <div class="location-pin lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <h3>Bretagne</h3>
+              <div class="region">Ancrage Ouest</div>
+            </div>
+          </div>
+          <p>Proximité avec les donneurs d'ordre de l'Ouest et réactivité sur les projets tertiaires, hôteliers et industriels de la région.</p>
+        </div>
+        <div class="location-card">
+          <div class="location-card-head">
+            <div class="location-pin cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <h3>Nouvelle-Aquitaine</h3>
+              <div class="region">Siège · Saint-Georges-lès-Baillargeaux</div>
+            </div>
+          </div>
+          <p>Siège historique créé en 2014. Pôle principal de production : études de prix, conception, BIM, projetage et pilotage des grands projets.</p>
+        </div>
+      </div>
+      <div class="locations-global">
+        <div class="locations-global-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
+        <div>
+          <h4>France entière &amp; international</h4>
+          <p>Nos équipes se déplacent sur tout le territoire national et accompagnent des projets à l'étranger pour les donneurs d'ordre grands comptes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Direction -->
+    <div style="margin-bottom: 40px;">
+      <h2 style="font-size: 1.4rem; color: var(--navy); margin-bottom: 20px; font-weight: 600;">— Direction</h2>
+    </div>
+
+    <div class="team-grid" style="margin-bottom: 60px;">
+
+      <!-- Laurent GATINEAU — Directeur -->
+      <article class="member reveal">
+        <div class="avatar av-navy">LG</div>
+        <h3>Laurent</h3>
+        <div class="role">Directeur de Study Elec</div>
+        <p class="bio">Fondateur de Study Elec en 2014, Laurent dirige l'entreprise forte de <strong>37 ans d'expérience</strong> en ingénierie électrique. Il pilote le développement commercial, assure la responsabilité des projets, intervient en CFO-CFA, projetage CAO-DAO et études de prix — un interlocuteur unique, impliqué et disponible.</p>
+        <div class="skills">
+          <span class="skill">Commercial</span>
+          <span class="skill">Responsable de projets</span>
+          <span class="skill">Technicien CFO-CFA</span>
+          <span class="skill">Projeteur CAO-DAO</span>
+          <span class="skill">Études de prix</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          37 ans d'expérience
+        </div>
+      </article>
+
+      <!-- Sylvain METAIS — Directeur technique -->
+      <article class="member reveal delay-1">
+        <div class="avatar av-cyan">SM</div>
+        <h3>Sylvain</h3>
+        <div class="role">Directeur technique</div>
+        <p class="bio">Directeur technique du bureau d'études, Sylvain supervise la production technique et la qualité des livrables. Responsable de projets, il assure également la conception, la production CFO/CFA, le projetage CAO/DAO et les études de prix. Formation Bac+2, <strong>18 ans d'expérience</strong>.</p>
+        <div class="skills">
+          <span class="skill">Responsable de projets</span>
+          <span class="skill">Conception de projets</span>
+          <span class="skill">Technicien CFO/CFA</span>
+          <span class="skill">Projeteur CAO/DAO</span>
+          <span class="skill">Études de prix</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          18 ans · Bac+2
+        </div>
+      </article>
+
+      <!-- Cécile DOMAIN — Responsable Études de prix -->
+      <article class="member reveal delay-2">
+        <div class="avatar av-mixed">CD</div>
+        <h3>Cécile</h3>
+        <div class="role">Responsable Études de prix</div>
+        <p class="bio">Cécile dirige le pôle études de prix. Ingénieure Bac+5 avec <strong>14 ans d'expérience</strong>, elle conçoit des dossiers de chiffrage précis et argumentés pour les entreprises générales et d'électricité : métrés fiables, hypothèses justifiées, variantes techniques et dossiers exploitables directement pour la négociation.</p>
+        <div class="skills">
+          <span class="skill">Études de prix</span>
+          <span class="skill">Conception de projets</span>
+          <span class="skill">Métrés &amp; DPGF</span>
+          <span class="skill">Variantes techniques</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          14 ans · Bac+5
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Bureau d'études -->
+    <div style="margin-bottom: 40px;">
+      <h2 style="font-size: 1.4rem; color: var(--navy); margin-bottom: 20px; font-weight: 600;">— Bureau d'études</h2>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- Stéphanie GRILLET -->
+      <article class="member reveal">
+        <div class="avatar av-lime">SG</div>
+        <h3>Stéphanie</h3>
+        <div class="role">Technicienne d'études confirmée</div>
+        <p class="bio">La plus expérimentée des techniciennes de l'équipe, Stéphanie met ses <strong>24 ans d'expérience</strong> au service de la production technique : CFO/CFA, projetage CAO/DAO et spécialité BIM. Formation Bac+2.</p>
+        <div class="skills">
+          <span class="skill">Technicienne CFO/CFA</span>
+          <span class="skill">Projeteuse CAO/DAO</span>
+          <span class="skill">Spécialiste BIM</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          24 ans · Bac+2
+        </div>
+      </article>
+
+      <!-- Mickaël GUERRAUD -->
+      <article class="member reveal delay-1">
+        <div class="avatar av-navy">MG</div>
+        <h3>Mickaël</h3>
+        <div class="role">Technicien d'études confirmé — BIM</div>
+        <p class="bio">Fort de <strong>20 ans d'expérience</strong>, Mickaël intervient sur la production CFO/CFA, le projetage CAO/DAO et porte l'expertise BIM de l'équipe. Formation Bac+2.</p>
+        <div class="skills">
+          <span class="skill">Technicien CFO/CFA</span>
+          <span class="skill">Projeteur CAO/DAO</span>
+          <span class="skill">Spécialiste BIM</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          20 ans · Bac+2
+        </div>
+      </article>
+
+      <!-- Valentin RACCA -->
+      <article class="member reveal delay-3">
+        <div class="avatar av-lime">VR</div>
+        <h3>Valentin</h3>
+        <div class="role">Technicien d'études — Spécialiste Éclairage</div>
+        <p class="bio">Ingénieur Bac+5 avec <strong>7 ans d'expérience</strong>, Valentin combine plusieurs spécialités : production CFO/CFA, projetage CAO/DAO, expertise BIM et pilotage des études d'éclairage (Dialux Evo).</p>
+        <div class="skills">
+          <span class="skill">Technicien CFO/CFA</span>
+          <span class="skill">Projeteur CAO/DAO</span>
+          <span class="skill">Spécialiste BIM</span>
+          <span class="skill">Spécialiste Éclairage</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          7 ans · Bac+5
+        </div>
+      </article>
+
+      <!-- Marine MENU -->
+      <article class="member reveal delay-4">
+        <div class="avatar av-mixed">MM</div>
+        <h3>Marine</h3>
+        <div class="role">Technicienne d'études</div>
+        <p class="bio">Ingénieure Bac+5 avec <strong>4 ans d'expérience</strong>, Marine intervient sur la production technique CFO/CFA et le projetage CAO/DAO, avec un fort bagage technique et méthodologique.</p>
+        <div class="skills">
+          <span class="skill">Technicienne CFO/CFA</span>
+          <span class="skill">Projeteuse CAO/DAO</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          4 ans · Bac+5
+        </div>
+      </article>
+
+      <!-- Lylian LEBRETON -->
+      <article class="member reveal">
+        <div class="avatar av-navy">LL</div>
+        <h3>Lylian</h3>
+        <div class="role">Projeteur CAO/DAO</div>
+        <p class="bio">Projeteur spécialisé dans la production 2D / BIM, Lylian assure la mise au propre des plans d'exécution, repérages et synoptiques. <strong>2 ans d'expérience</strong>, formation Bac+3.</p>
+        <div class="skills">
+          <span class="skill">Projeteur CAO/DAO</span>
+          <span class="skill">Plans d'exécution</span>
+          <span class="skill">Repérages</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          2 ans · Bac+3
+        </div>
+      </article>
+
+      <!-- Evan VAILLANT -->
+      <article class="member reveal delay-1">
+        <div class="avatar av-cyan">EV</div>
+        <h3>Evan</h3>
+        <div class="role">Apprenti BTS</div>
+        <p class="bio">En cours de formation BTS, Evan prépare son avenir de technicien au sein de Study Elec. Il participe progressivement à la production et monte en compétence sur les outils du bureau d'études.</p>
+        <div class="skills">
+          <span class="skill">Formation BTS</span>
+          <span class="skill">Apprentissage</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Apprenti · BTS
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Support -->
+    <div style="margin: 60px 0 40px;">
+      <h2 style="font-size: 1.4rem; color: var(--navy); margin-bottom: 20px; font-weight: 600;">— Support</h2>
+    </div>
+
+    <div class="team-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 420px));">
+
+      <!-- Sarah GATINEAU -->
+      <article class="member reveal">
+        <div class="avatar av-lime">SG</div>
+        <h3>Sarah</h3>
+        <div class="role">Assistante technique</div>
+        <p class="bio">Pivot administratif et technique du bureau d'études, Sarah coordonne les demandes clients, suit la vie des projets et intervient également en projetage CAO. <strong>6 ans d'expérience</strong>, formation Bac.</p>
+        <div class="skills">
+          <span class="skill">Assistante technique</span>
+          <span class="skill">Projeteuse CAO</span>
+          <span class="skill">Coordination</span>
+          <span class="skill">Relation clients</span>
+        </div>
+        <div class="meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          6 ans · Bac
+        </div>
+      </article>
+
+    </div>
+
+    <p style="margin-top: 60px; text-align: center; color: var(--grey); font-size: .95rem;" class="reveal">
+      Intérimaires suivant nécessités · Organigramme janvier 2026
+    </p>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container">
+    <div class="values-head">
+      <span class="section-tag reveal">Nos valeurs</span>
+      <h2 class="reveal delay-1">Ce qui anime l'équipe au quotidien</h2>
+      <p class="reveal delay-2">Au-delà des compétences techniques, trois convictions partagées guident notre façon de travailler — avec nos clients comme entre nous.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h4>Rigueur technique</h4>
+        <p>Chaque dossier est validé, relu, vérifié. Nos livrables respectent les normes en vigueur et les exigences spécifiques de chaque projet, sans compromis.</p>
+      </div>
+      <div class="value-card reveal delay-1">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4>Proximité &amp; écoute</h4>
+        <p>Bureau d'études à taille humaine, nous cultivons la relation directe avec nos clients. Un interlocuteur dédié, une disponibilité réelle, des échanges sans filtre.</p>
+      </div>
+      <div class="value-card reveal delay-2">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7v7c0 5 4 9 10 10 6-1 10-5 10-10V7l-10-5z"/></svg>
+        </div>
+        <h4>Engagement &amp; tenue des délais</h4>
+        <p>Un projet démarré est un projet livré. Notre organisation et notre discipline permettent de respecter les plannings, même sur les chantiers les plus contraints.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="join">
+  <div class="container">
+    <div class="join-inner reveal">
+      <div>
+        <h2>Envie de rejoindre l'équipe ?</h2>
+        <p>Nous recherchons régulièrement des ingénieurs, projeteurs et techniciens passionnés par l'électricité tertiaire et le BIM. Envoyez-nous votre candidature.</p>
+      </div>
+      <a href="mailto:contact@study-elec.fr?subject=Candidature%20spontan%C3%A9e" class="btn btn-green">
+        Envoyer ma candidature
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo" style="text-decoration:none;" aria-label="Study Elec — Études &amp; Conseils">
+          <img class="logo-img" src="assets/logo-header.png" srcset="assets/logo-header@2x.png 2x" alt="Study Elec — Études &amp; Conseils">
+        </a>
+        <p>Bureau d'études indépendant créé en 2014, spécialisé en ingénierie électrique Courants Forts et Courants Faibles. Qualification OPQIBI 1426 — IRVE.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Expertises</h5>
+        <ul>
+          <li><a href="index.html#services">Maîtrise d'œuvre CFO/CFA</a></li>
+          <li><a href="index.html#services">Études de prix</a></li>
+          <li><a href="index.html#services">Études d'exécution BIM</a></li>
+          <li><a href="index.html#services">Montage de projets</a></li>
+          <li><a href="index.html#services">SSI</a></li>
+          <li><a href="index.html#services">IRVE · OPQIBI 1426</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Société</h5>
+        <ul>
+          <li><a href="index.html#about">À propos</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="references.html">Références</a></li>
+          <li><a href="index.html#process">Valeur ajoutée</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="https://fr.linkedin.com/company/study-elec" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@study-elec.fr">contact@study-elec.fr</a></li>
+          <li>13 rue du Clos de l'Ormeau</li>
+          <li>ZAE du Clos de l'Ormeau</li>
+          <li>86130 St-Georges-lès-Baillargeaux</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 SAS Study Elec · Capital 3 500 € · RCS Poitiers 802 902 445 00039.</div>
+      <div><a href="mentions-legales.html" style="color:inherit; margin-right:18px;">Mentions légales</a><a href="confidentialite.html" style="color:inherit;">Politique de confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

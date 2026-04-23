@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mentions légales — Study Elec</title>
+<meta name="description" content="Mentions légales du site Study Elec — bureau d'études en ingénierie électrique, Saint-Georges-lès-Baillargeaux (86)." />
+<meta name="robots" content="noindex, follow" />
+<link rel="icon" type="image/png" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
+<link rel="shortcut icon" href="assets/apple-touch-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1B3A6C;--navy-deep:#0F2547;--lime:#8DC63F;--lime-2:#7AB32F;--cyan:#3CAEC8;--ink:#0F2547;--bg:#FAFBF7;--bg-2:#F1F4EC;--grey:#5C6B7C;--line:rgba(27,58,108,.1)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html{overflow-x:hidden}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+  img,svg,video,iframe{max-width:100%;height:auto;display:block}
+  p,h1,h2,h3,h4,h5,li,a,span,div{word-wrap:break-word;overflow-wrap:anywhere}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.2;color:var(--navy)}
+  .container{max-width:900px;margin:0 auto;padding:0 28px}
+  a{color:var(--navy);text-decoration:underline;text-decoration-color:var(--lime);text-underline-offset:3px;transition:color .2s}
+  a:hover{color:var(--lime-2)}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,251,247,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s}
+  nav.scrolled{border-bottom-color:var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px;max-width:1240px;margin:0 auto;padding:0 28px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .logo img.logo-img{display:block;height:68px;width:auto}
+  .logo-text{display:flex;flex-direction:column;line-height:1}
+  .logo-text .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.35rem;color:var(--navy);letter-spacing:-.02em}
+  .logo-text .tag{font-size:.67rem;color:var(--lime-2);font-weight:700;letter-spacing:.08em;margin-top:3px}
+  .nav-back{font-size:.88rem;color:var(--grey);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s}
+  .nav-back:hover{color:var(--navy)}
+  .nav-back svg{width:14px;height:14px}
+
+  .hero{padding:140px 0 50px;text-align:center;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(141,198,63,.14),transparent 60%),radial-gradient(ellipse 50% 40% at 85% 80%,rgba(60,174,200,.12),transparent 60%);z-index:0}
+  .hero>.container{position:relative;z-index:1}
+  .eyebrow{display:inline-block;background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:.78rem;font-weight:500;color:var(--grey);margin-bottom:20px;letter-spacing:.1em;text-transform:uppercase}
+  .hero h1{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px}
+  .hero .sub{color:var(--grey);font-size:1rem}
+
+  article{padding:40px 0 100px}
+  article section{margin-bottom:48px}
+  article h2{font-size:1.5rem;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--lime)}
+  article h3{font-size:1.1rem;margin:24px 0 10px;color:var(--navy)}
+  article p{margin-bottom:14px;color:var(--ink)}
+  article ul{list-style:none;margin:12px 0 20px}
+  article ul li{padding-left:20px;position:relative;margin-bottom:8px}
+  article ul li::before{content:'';position:absolute;left:0;top:12px;width:10px;height:2px;background:var(--lime-2)}
+  article .legal-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:20px 0}
+  article .legal-card strong{color:var(--navy);font-weight:600}
+  .muted{color:var(--grey);font-size:.9rem}
+  .update{background:var(--bg-2);border-radius:10px;padding:14px 18px;font-size:.88rem;color:var(--grey);margin-bottom:30px;border-left:3px solid var(--lime)}
+
+  footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:50px 0 28px;font-size:.88rem;text-align:center}
+  footer a{color:rgba(255,255,255,.75);text-decoration:none;margin:0 12px}
+  footer a:hover{color:var(--lime)}
+  footer .copyright{margin-bottom:14px}
+
+  @media(max-width:900px){
+    .nav-inner{height:70px;padding:0 24px}
+    .logo img.logo-img{height:56px}
+    .logo-svg{width:48px;height:40px}
+    .logo-text .name{font-size:1.15rem}
+    .logo-text .tag{font-size:.6rem}
+    .nav-back{font-size:.82rem}
+    .hero{padding:110px 0 30px}
+    .hero h1{font-size:clamp(1.8rem,6vw,2.4rem)}
+    .hero .sub{font-size:.95rem}
+    article{padding:20px 0 70px}
+    article section{margin-bottom:38px}
+    article h2{font-size:1.3rem}
+    article h3{font-size:1rem}
+    article p,article li{font-size:.95rem}
+    article .legal-card{padding:18px 20px;margin:16px 0}
+    body{line-height:1.7}
+  }
+  @media(max-width:520px){
+    .container{padding:0 18px}
+    .nav-inner{height:60px;padding:0 18px}
+    .logo-svg{width:40px;height:34px}
+    .logo-text .name{font-size:.98rem}
+    .logo-text .tag{font-size:.52rem;letter-spacing:.05em}
+    .nav-back span{display:none}
+    .hero{padding:90px 0 24px}
+    .hero h1{font-size:1.55rem}
+    article{padding:16px 0 50px}
+    article h2{font-size:1.15rem;padding-bottom:8px}
+    article .legal-card{padding:16px;border-radius:10px}
+    article .legal-card p{font-size:.9rem}
+    .update{padding:12px 14px;font-size:.82rem}
+    footer{padding:40px 0 24px;font-size:.82rem}
+    footer a{margin:0 8px;display:inline-block}
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="Study Elec — Études &amp; Conseils">
+      <img class="logo-img" src="assets/logo-header.png" srcset="assets/logo-header@2x.png 2x" alt="Study Elec — Études &amp; Conseils">
+    </a>
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span>Retour</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Informations légales</span>
+    <h1>Mentions légales</h1>
+    <p class="sub">Conformément à la loi nº2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.</p>
+  </div>
+</section>
+
+<article>
+  <div class="container">
+    <div class="update">Dernière mise à jour : avril 2026</div>
+
+    <section>
+      <h2>1. Éditeur du site</h2>
+      <p>Le site <strong>www.study-elec.fr</strong> est édité par :</p>
+      <div class="legal-card">
+        <p><strong>SAS Study Elec</strong></p>
+        <p>Société par actions simplifiée au capital de 3 500 €</p>
+        <p><strong>RCS</strong> Poitiers nº 802 902 445 00039<br>
+        <strong>SIRET</strong> 802 902 445 00039<br>
+        <strong>Code APE</strong> 7112B — Ingénierie, études techniques</p>
+        <p><strong>Siège social :</strong><br>
+        13 rue du Clos de l'Ormeau<br>
+        ZAE du Clos de l'Ormeau<br>
+        86130 Saint-Georges-lès-Baillargeaux — France</p>
+        <p><strong>Téléphone :</strong> <a href="tel:+33668631618">+33 (0)6 68 63 16 18</a><br>
+        <strong>Email :</strong> <a href="mailto:contact@study-elec.fr">contact@study-elec.fr</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Directeur de la publication</h2>
+      <p><strong>Laurent Gatineau</strong>, en qualité de Président-Directeur de la SAS Study Elec.</p>
+      <p>Contact du directeur de la publication : <a href="mailto:contact@study-elec.fr">contact@study-elec.fr</a></p>
+    </section>
+
+    <section>
+      <h2>3. Hébergement</h2>
+      <p>Le site est hébergé par :</p>
+      <div class="legal-card">
+        <p><strong>Vercel Inc.</strong></p>
+        <p>340 S Lemon Ave #4133<br>
+        Walnut, CA 91789 — United States</p>
+        <p>Site web : <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Propriété intellectuelle</h2>
+      <p>L'ensemble des éléments figurant sur le site <strong>www.study-elec.fr</strong> (textes, photographies, illustrations, logos, vidéos, graphismes, structure du site, charte graphique, code source) est protégé par le droit d'auteur et reste la propriété exclusive de la SAS Study Elec ou de ses partenaires.</p>
+      <p>Toute reproduction, représentation, adaptation ou exploitation, totale ou partielle, par quelque procédé que ce soit, sans l'accord écrit préalable de Study Elec, est strictement interdite et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+      <p>Les marques et logos de tiers cités sur le site (clients, fournisseurs, partenaires) restent la propriété de leurs titulaires respectifs.</p>
+    </section>
+
+    <section>
+      <h2>5. Données personnelles</h2>
+      <p>Les informations collectées via le formulaire de contact font l'objet d'un traitement informatique destiné exclusivement à répondre à votre demande.</p>
+      <p>Pour en savoir plus sur la collecte et le traitement de vos données, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+    </section>
+
+    <section>
+      <h2>6. Responsabilité</h2>
+      <p>Les informations diffusées sur le site <strong>www.study-elec.fr</strong> sont fournies à titre indicatif. La SAS Study Elec s'efforce d'assurer l'exactitude et la mise à jour de ces informations, mais ne saurait garantir leur exhaustivité ni l'absence d'erreurs.</p>
+      <p>L'utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive. La SAS Study Elec ne pourra être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site.</p>
+    </section>
+
+    <section>
+      <h2>7. Liens hypertextes</h2>
+      <p>Le site peut contenir des liens vers des sites tiers (LinkedIn, partenaires, etc.). La SAS Study Elec n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+      <p>Toute mise en place de lien hypertexte vers le site <strong>www.study-elec.fr</strong> doit faire l'objet d'une autorisation écrite préalable.</p>
+    </section>
+
+    <section>
+      <h2>8. Cookies</h2>
+      <p>Le site <strong>www.study-elec.fr</strong> n'utilise <strong>aucun cookie de suivi ni de mesure d'audience de tiers</strong>. Seuls les cookies strictement nécessaires au bon fonctionnement du site peuvent être déposés.</p>
+      <p>Pour plus d'informations, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+    </section>
+
+    <section>
+      <h2>9. Droit applicable</h2>
+      <p>Les présentes mentions légales sont régies par le <strong>droit français</strong>. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.</p>
+    </section>
+
+    <section>
+      <h2>10. Contact</h2>
+      <p>Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter :</p>
+      <ul>
+        <li>Par email : <a href="mailto:contact@study-elec.fr">contact@study-elec.fr</a></li>
+        <li>Par téléphone : <a href="tel:+33668631618">+33 (0)6 68 63 16 18</a></li>
+        <li>Par courrier : SAS Study Elec — 13 rue du Clos de l'Ormeau — 86130 Saint-Georges-lès-Baillargeaux</li>
+      </ul>
+    </section>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <div class="copyright">© 2026 SAS Study Elec · Capital 3 500 € · RCS Poitiers 802 902 445 00039.</div>
+    <div>
+      <a href="index.html">Accueil</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+</script>
+</body>
+</html>

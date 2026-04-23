@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Politique de confidentialité — Study Elec</title>
+<meta name="description" content="Politique de confidentialité et de protection des données personnelles du site Study Elec, conforme au RGPD." />
+<meta name="robots" content="noindex, follow" />
+<link rel="icon" type="image/png" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
+
+<link rel="shortcut icon" href="assets/apple-touch-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1B3A6C;--navy-deep:#0F2547;--lime:#8DC63F;--lime-2:#7AB32F;--cyan:#3CAEC8;--ink:#0F2547;--bg:#FAFBF7;--bg-2:#F1F4EC;--grey:#5C6B7C;--line:rgba(27,58,108,.1)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html{overflow-x:hidden}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+  img,svg,video,iframe{max-width:100%;height:auto;display:block}
+  p,h1,h2,h3,h4,h5,li,a,span,div{word-wrap:break-word;overflow-wrap:anywhere}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.2;color:var(--navy)}
+  .container{max-width:900px;margin:0 auto;padding:0 28px}
+  a{color:var(--navy);text-decoration:underline;text-decoration-color:var(--lime);text-underline-offset:3px;transition:color .2s}
+  a:hover{color:var(--lime-2)}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,251,247,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s}
+  nav.scrolled{border-bottom-color:var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px;max-width:1240px;margin:0 auto;padding:0 28px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .logo img.logo-img{display:block;height:68px;width:auto}
+  .logo-text{display:flex;flex-direction:column;line-height:1}
+  .logo-text .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.35rem;color:var(--navy);letter-spacing:-.02em}
+  .logo-text .tag{font-size:.67rem;color:var(--lime-2);font-weight:700;letter-spacing:.08em;margin-top:3px}
+  .nav-back{font-size:.88rem;color:var(--grey);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .nav-back:hover{color:var(--navy)}
+  .nav-back svg{width:14px;height:14px}
+
+  .hero{padding:140px 0 50px;text-align:center;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(141,198,63,.14),transparent 60%),radial-gradient(ellipse 50% 40% at 85% 80%,rgba(60,174,200,.12),transparent 60%);z-index:0}
+  .hero>.container{position:relative;z-index:1}
+  .eyebrow{display:inline-block;background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:.78rem;font-weight:500;color:var(--grey);margin-bottom:20px;letter-spacing:.1em;text-transform:uppercase}
+  .hero h1{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px}
+  .hero .sub{color:var(--grey);font-size:1rem;max-width:640px;margin:0 auto}
+
+  article{padding:40px 0 100px}
+  article section{margin-bottom:44px}
+  article h2{font-size:1.5rem;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--lime)}
+  article h3{font-size:1.1rem;margin:20px 0 8px;color:var(--navy)}
+  article p{margin-bottom:12px;color:var(--ink)}
+  article ul{list-style:none;margin:12px 0 18px}
+  article ul li{padding-left:22px;position:relative;margin-bottom:8px}
+  article ul li::before{content:'✓';position:absolute;left:0;top:0;color:var(--lime-2);font-weight:700}
+  article .legal-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:20px 0}
+  article .legal-card strong{color:var(--navy);font-weight:600}
+  article table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.93rem}
+  article th{text-align:left;padding:12px 14px;background:var(--bg-2);color:var(--navy);font-weight:600;font-size:.85rem;border-bottom:2px solid var(--lime)}
+  article td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  article tr:last-child td{border-bottom:none}
+  .update{background:var(--bg-2);border-radius:10px;padding:14px 18px;font-size:.88rem;color:var(--grey);margin-bottom:30px;border-left:3px solid var(--lime)}
+  .highlight{background:#fff;border-left:4px solid var(--cyan);padding:18px 22px;border-radius:8px;margin:20px 0}
+  .highlight strong{color:var(--navy)}
+
+  footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:50px 0 28px;font-size:.88rem;text-align:center}
+  footer a{color:rgba(255,255,255,.75);text-decoration:none;margin:0 12px}
+  footer a:hover{color:var(--lime)}
+  footer .copyright{margin-bottom:14px}
+
+  @media(max-width:900px){
+    .nav-inner{height:70px;padding:0 24px}
+    .logo img.logo-img{height:56px}
+    .logo-svg{width:48px;height:40px}
+    .logo-text .name{font-size:1.15rem}
+    .logo-text .tag{font-size:.6rem}
+    .nav-back{font-size:.82rem}
+    .hero{padding:110px 0 30px}
+    .hero h1{font-size:clamp(1.8rem,6vw,2.4rem)}
+    .hero .sub{font-size:.95rem}
+    article{padding:20px 0 70px}
+    article section{margin-bottom:36px}
+    article h2{font-size:1.3rem}
+    article h3{font-size:1rem}
+    article p,article li{font-size:.95rem}
+    article .legal-card{padding:18px 20px;margin:16px 0}
+    article .highlight{padding:16px 18px}
+    body{line-height:1.7}
+  }
+  @media(max-width:520px){
+    .container{padding:0 18px}
+    .nav-inner{height:60px;padding:0 18px}
+    .logo-svg{width:40px;height:34px}
+    .logo-text .name{font-size:.98rem}
+    .logo-text .tag{font-size:.52rem;letter-spacing:.05em}
+    .nav-back span{display:none}
+    .hero{padding:90px 0 24px}
+    .hero h1{font-size:1.55rem}
+    article{padding:16px 0 50px}
+    article h2{font-size:1.15rem;padding-bottom:8px}
+    article .legal-card{padding:16px;border-radius:10px}
+    article .legal-card p{font-size:.9rem}
+    .update{padding:12px 14px;font-size:.82rem}
+    .highlight{padding:14px 16px;border-radius:6px}
+    .highlight p{font-size:.9rem}
+    /* Table scrollable horizontalement sur petit mobile */
+    article table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;font-size:.78rem}
+    article th,article td{padding:8px 10px}
+    footer{padding:40px 0 24px;font-size:.82rem}
+    footer a{margin:0 8px;display:inline-block}
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="Study Elec — Études &amp; Conseils">
+      <img class="logo-img" src="assets/logo-header.png" srcset="assets/logo-header@2x.png 2x" alt="Study Elec — Études &amp; Conseils">
+    </a>
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span>Retour</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">RGPD · Protection des données</span>
+    <h1>Politique de confidentialité</h1>
+    <p class="sub">Nous nous engageons à protéger vos données personnelles dans le plus strict respect du Règlement Général sur la Protection des Données (RGPD).</p>
+  </div>
+</section>
+
+<article>
+  <div class="container">
+    <div class="update">Dernière mise à jour : avril 2026</div>
+
+    <div class="highlight">
+      <p><strong>En résumé :</strong> Study Elec ne collecte que les données que vous nous transmettez volontairement via le formulaire de contact. Aucun cookie de suivi, aucune revente à des tiers, aucune utilisation commerciale non-sollicitée. Vous disposez à tout moment d'un droit d'accès, de rectification et de suppression.</p>
+    </div>
+
+    <section>
+      <h2>1. Responsable du traitement</h2>
+      <p>Le responsable du traitement des données collectées via le site <strong>www.study-elec.fr</strong> est :</p>
+      <div class="legal-card">
+        <p><strong>SAS Study Elec</strong><br>
+        13 rue du Clos de l'Ormeau — ZAE du Clos de l'Ormeau<br>
+        86130 Saint-Georges-lès-Baillargeaux — France</p>
+        <p>Représentée par <strong>Laurent Gatineau</strong>, Président</p>
+        <p>Contact : <a href="mailto:contact@study-elec.fr">contact@study-elec.fr</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Données collectées</h2>
+      <p>Nous ne collectons que les données que vous nous transmettez <strong>activement et volontairement</strong>, via le formulaire de contact du site ou par email.</p>
+      <table>
+        <thead>
+          <tr><th>Donnée</th><th>Caractère</th><th>Finalité</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nom et prénom</td><td>Obligatoire</td><td>Identification de l'interlocuteur</td></tr>
+          <tr><td>Email</td><td>Obligatoire</td><td>Réponse à votre demande</td></tr>
+          <tr><td>Téléphone</td><td>Facultatif</td><td>Réponse rapide si demandée</td></tr>
+          <tr><td>Société</td><td>Facultatif</td><td>Contextualisation du projet</td></tr>
+          <tr><td>Nature du projet</td><td>Facultatif</td><td>Orientation vers le bon interlocuteur</td></tr>
+          <tr><td>Message</td><td>Obligatoire</td><td>Compréhension de la demande</td></tr>
+        </tbody>
+      </table>
+      <p>Aucune donnée sensible (donnée de santé, opinion politique, religieuse, syndicale…) n'est collectée.</p>
+    </section>
+
+    <section>
+      <h2>3. Finalités du traitement</h2>
+      <p>Les données collectées sont utilisées exclusivement pour :</p>
+      <ul>
+        <li>Répondre à votre demande de contact, de devis ou d'information</li>
+        <li>Assurer le suivi commercial et technique du projet éventuel qui en découle</li>
+        <li>Tenir à jour notre fichier client et prospect</li>
+      </ul>
+      <p>Vos données <strong>ne sont jamais vendues, louées ou cédées</strong> à des tiers à des fins commerciales.</p>
+    </section>
+
+    <section>
+      <h2>4. Base légale</h2>
+      <p>Le traitement de vos données repose sur :</p>
+      <ul>
+        <li>Votre <strong>consentement</strong> explicite, matérialisé par l'envoi volontaire du formulaire de contact (article 6.1.a du RGPD)</li>
+        <li>Notre <strong>intérêt légitime</strong> à répondre à vos demandes commerciales (article 6.1.f du RGPD)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Destinataires des données</h2>
+      <p>Vos données sont accessibles exclusivement aux <strong>collaborateurs habilités de Study Elec</strong> (équipe commerciale et technique) dans le cadre strict du traitement de votre demande.</p>
+      <p>Nous pouvons être amenés à partager certaines données avec des <strong>sous-traitants techniques</strong> strictement nécessaires au fonctionnement du site, notamment :</p>
+      <ul>
+        <li><strong>Vercel Inc.</strong> (hébergement du site) — engagements contractuels conformes au RGPD</li>
+      </ul>
+      <p>Ces sous-traitants agissent exclusivement sur nos instructions et ne peuvent utiliser vos données à leurs propres fins.</p>
+    </section>
+
+    <section>
+      <h2>6. Durée de conservation</h2>
+      <ul>
+        <li>Données des prospects (contact sans suite) : <strong>3 ans</strong> à compter du dernier contact</li>
+        <li>Données clients : durée de la relation commerciale + <strong>10 ans</strong> pour les obligations comptables et fiscales</li>
+        <li>Logs techniques du serveur web : <strong>12 mois</strong> maximum</li>
+      </ul>
+      <p>À l'issue de ces durées, les données sont soit anonymisées, soit définitivement supprimées.</p>
+    </section>
+
+    <section>
+      <h2>7. Sécurité des données</h2>
+      <p>Study Elec met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données :</p>
+      <ul>
+        <li>Connexion au site sécurisée par HTTPS (chiffrement SSL/TLS)</li>
+        <li>Hébergement sur infrastructure professionnelle avec sauvegardes régulières</li>
+        <li>Accès aux données limité aux seuls collaborateurs habilités</li>
+        <li>Politique interne de sécurité des systèmes d'information</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Vos droits</h2>
+      <p>Conformément au RGPD et à la loi « Informatique et Libertés » modifiée, vous disposez des droits suivants sur vos données personnelles :</p>
+      <ul>
+        <li><strong>Droit d'accès</strong> — obtenir la confirmation que des données vous concernant sont traitées et en recevoir une copie</li>
+        <li><strong>Droit de rectification</strong> — demander la correction de données inexactes ou incomplètes</li>
+        <li><strong>Droit à l'effacement</strong> (« droit à l'oubli ») — demander la suppression de vos données dans certains cas</li>
+        <li><strong>Droit à la limitation</strong> du traitement</li>
+        <li><strong>Droit à la portabilité</strong> — récupérer vos données dans un format structuré</li>
+        <li><strong>Droit d'opposition</strong> au traitement pour motif légitime</li>
+        <li><strong>Droit de retirer votre consentement</strong> à tout moment</li>
+      </ul>
+      <p>Pour exercer ces droits, contactez-nous à <a href="mailto:contact@study-elec.fr">contact@study-elec.fr</a> en précisant votre demande et en joignant une copie de votre pièce d'identité. Nous répondons sous <strong>30 jours maximum</strong>.</p>
+      <p>Si vous estimez que le traitement ne respecte pas la réglementation, vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+    </section>
+
+    <section>
+      <h2>9. Cookies</h2>
+      <p>Le site <strong>www.study-elec.fr</strong> n'utilise <strong>aucun cookie publicitaire, aucun cookie de suivi comportemental ni de mesure d'audience tiers</strong> (Google Analytics, Meta Pixel, etc.).</p>
+      <p>Seuls des cookies techniques strictement nécessaires au bon fonctionnement du site peuvent être déposés sur votre navigateur (session, préférences d'affichage). Ces cookies ne nécessitent pas votre consentement préalable conformément à l'article 82 de la loi Informatique et Libertés.</p>
+    </section>
+
+    <section>
+      <h2>10. Transferts hors Union Européenne</h2>
+      <p>Certaines de nos données techniques peuvent être hébergées sur des serveurs situés en dehors de l'Union Européenne (notamment États-Unis, dans le cadre de l'hébergement Vercel).</p>
+      <p>Ces transferts sont encadrés par des <strong>clauses contractuelles types</strong> approuvées par la Commission européenne, garantissant un niveau de protection équivalent à celui du RGPD.</p>
+    </section>
+
+    <section>
+      <h2>11. Modifications de la politique</h2>
+      <p>La présente politique de confidentialité peut être modifiée à tout moment afin de refléter les évolutions réglementaires ou l'adaptation de nos pratiques. La date de dernière mise à jour figure en haut de cette page.</p>
+    </section>
+
+    <section>
+      <h2>12. Nous contacter</h2>
+      <p>Pour toute question relative à la protection de vos données personnelles :</p>
+      <ul>
+        <li><strong>Par email :</strong> <a href="mailto:contact@study-elec.fr">contact@study-elec.fr</a></li>
+        <li><strong>Par téléphone :</strong> <a href="tel:+33668631618">+33 (0)6 68 63 16 18</a></li>
+        <li><strong>Par courrier :</strong> SAS Study Elec — 13 rue du Clos de l'Ormeau — 86130 Saint-Georges-lès-Baillargeaux</li>
+      </ul>
+    </section>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <div class="copyright">© 2026 SAS Study Elec · Capital 3 500 € · RCS Poitiers 802 902 445 00039.</div>
+    <div>
+      <a href="index.html">Accueil</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+</script>
+</body>
+</html>
